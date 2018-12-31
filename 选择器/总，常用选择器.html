@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>常用选择器</title>
+		<style type="text/css">
+		    h1{color: blue;}
+		    
+		    .aaa{color:red;}
+			.bbb{font-size:30px;}
+			
+			#ccc{font-size:50px;}
+			/*选择器：
+			 * 通过id属性值选择中唯一的一个元素
+			  语法：   #id属性值{}
+			  */
+			 
+			 /*类选择器：
+			  * 通过元素class的属性值选中一组元素,
+			  * 语法：class属性值{}
+			  */
+			 
+			h1,.bbb,#ccc{background-color:yellow;}
+			/*选择器分组
+			       通过选择器分组可以同时选中多个选择器对应的元素
+			       语法：选择器1，选择器2，选择器n{}
+			  */
+			 
+			 /*通配选择器
+			  选择所有的元素
+			  语法：*{}
+			  */
+		</style>
+	</head>
+	<body>
+		<h1>悯农</h1>
+		<p class="aaa bbb">锄禾日当午</p>
+		<p class="aaa">锄禾日当午</p>
+		<p class="bbb">锄禾日当午</p>
+		
+		<p id="ccc">锄禾日当午</p>
+	</body>
+</html>

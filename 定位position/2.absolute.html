@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box1{width: 200px;height: 200px;
+			background-color:aquamarine;}
+
+/*绝对定位：position；absolute
+ 1.开启绝对定位元素会脱离文档流
+ 2.开启绝对定位，如果不设置偏移量，元素位置不变
+ 3.绝对定位是相对于离他最近的开启了相对定位的祖先元素进行定位，
+       （一般子元素开启绝对定位，会同时开启父元素相对定位）
+        如果祖先元素没有开启相对定位，则相对浏览器窗口进行定位
+ 4.绝对定位会使元素提升一个层级*/			
+			.box2{width: 200px;height: 200px;
+			background-color:yellow;
+			position: absolute;		
+			right:0;top:0;}
+			
+			.box3{width: 200px;height: 200px;
+			background-color:green;}
+			
+			.box4{widows:300px;height:300px;
+			background-color:orange;
+			position: relative;}
+
+/*5.绝对定位会改变元素性质（因为脱离文档流）
+    内联元素变成块元素*/			
+			.aaa{width: 200px;height: 200px;
+			background-color:red;
+			position: absolute;
+			left:0;top:0}
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<div class="box4">
+			<div class="box2">111</div>
+		</div>
+		<div class="box3"></div>
+		
+		<span class="aaa">这是个span</span>
+		
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+<!--表单的作用是用来将用户的信息提交给服务器
+	比如：百度搜索框、注册、登录
+-->		
+
+<!--form标签中必须指定一个action属性，该属性指向的是一个服务器地址
+	当我们提交表单时会提交到action属性对应的地址
+-->        
+        <form action="aaaaaaa.html">
+<!--使用input创建文本框，type属性为text
+	
+	如果希望表单中的数据会提交到服务器，需要给表单设置name属性
+	name表示提交的字符串
+	用户填写的信息会附在yrl地址的后面以查询字符串的形式发送给服务器
+	
+	value设置按钮上的文字
+	给文本框设置value值，则为文本框中的默认值
+-->        	
+        	用户名：
+        	<input type="text" name="username"value="000"/>
+        	<br />
+
+<!--type属性设为password时，表示密码，文本框中输入时自动变黑点
+	placeholder设置默认内容水印
+-->
+        	密码：
+        	<input type="password" name="password" placeholder="0000000"/>
+        	<br />
+
+<!--使用input创建提交按钮，tyoe属性为submit-->
+        	<input type="submit" value="提交"/>
+        	
+        </form>
+	</body>
+</html>

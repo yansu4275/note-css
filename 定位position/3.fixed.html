@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+/*position：fixed固定定位
+    固定定位也是一种绝对定位，大部分特点和绝对定位相同
+    
+    不同点：
+    固定定位永远都会县归于浏览器窗口进行定位
+    固定定位会固定在页面窗口位置某个位置，不随页面滚动
+  
+  * IE6不支持固定定位*/		
+            
+			.aaa{
+				position:fixed;
+				margin:auto;
+				/*left:0;*/
+				/*right:0;*/
+				/*top:0;*/ 
+				bottom:0;
+				width:200px; 
+				height:200px; 
+				background: red;
+				/*display:inline-block;*/
+				/*margin-left:auto;*/ 
+				/*margin-right:auto;*/ 
+				/*float:none;*/ 
+				/*clear:both;*/
+			}
+			.eee{
+				width: 5px;
+				height: 100%;
+				background: #0000FF;
+			}
+			
+			.bbb{width:200px;height:200px;
+			background-color:yellow;
+			position:fixed;
+			left:0px;top:0px;}
+			
+			.ccc{width:200px;height:200px;
+			background-color:green;}
+			
+			.ddd{width:400px;height:400px;
+			background-color:orange;
+			position:relative;}
+		</style>
+	</head>
+	<body>
+		<div class="aaa"></div>
+		
+		<div class="ddd" >
+		    <div class="bbb"></div>
+		</div>
+		
+		<div class="ccc">ccc</div>
+	</body>
+</html>

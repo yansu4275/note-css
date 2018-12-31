@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+/*垂直外边距的重叠
+  网页中垂直方向的相邻外边距会发生外边距的重叠
+  指兄弟元素之间的相邻外边距会取最大值*/	
+			.aaa{width:100px;height:100px;
+			     background-color:red;
+			     margin-bottom:100px}
+			     
+			.bbb{width:100px;height:100px;
+			     background-color:blue;
+			     margin-top:100px}	
+
+/*父子元素垂直外边距相邻，子元素的处置外边距会设置给父元素，既父元素子元素一起动*/			     
+		    .ccc{width:200px;height:100px;  
+		         background-color:yellow;
+		         padding-top:100px}		         
+/*可以给ccc设置border-top或padding-top让父子元素隔开
+  但会加大盒子可见框，所以要注意在父元素中减掉相应高度*/
+ 		         
+		    .ddd{width:100px;height:100px;
+		         background-color:green}
+   		     
+		</style>
+	</head>
+	<body>
+		<div class="ccc">
+			<div class="ddd">ddd</div>
+		</div>
+		
+		<div class="aaa">aaa下外边距为100px</div>
+		0000    <!--设置一个内容，让aaa和bbb不相邻-->
+		<div class="bbb">bbb上外边距为100px</div>
+
+	</body>
+</html>

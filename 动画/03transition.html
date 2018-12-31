@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+
+			.aaa{
+				width: 200px;
+				height: 200px;
+				border: solid 2px red;
+				
+				/*transition---------------------过渡属性、时间、动画曲线、延迟时间*/
+				
+/*				transition: width 2s,height 2s ease;
+				-moz-transition: width 2s,height 2s ease; 
+				-webkit-transition: width 2s,height 2s ease; */
+				
+				transition: all 2s ease 1s;
+				-moz-transition: all 2s ease 1s; /* Firefox 4 */
+				-webkit-transition: all 2s ease 1s; /* Safari 和 Chrome */
+				
+				
+			}
+			
+			/*
+			 * linear---------匀速
+			 * ease-----------默认。低速开始，加快，变慢
+			 * ease-in--------低速开始
+			 * ease-out-------低速结束
+			 * ease-in-out----低速开始、结束
+			 * cubic-bezier(n,n,n,n)------n:0~1
+			 */
+			
+			.aaa:hover{
+				width: 400px;
+				height: 400px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>transition 移入移出样式改变</h1>
+		<div class="aaa"></div>
+		<button class="bbb">开始</button>
+	</body>
+</html>
+<script type="text/javascript">
+	var aaa = document.getElementsByClassName('aaa')
+	var bbb = document.getElementsByClassName('bbb')
+	bbb[0].onclick=function(){
+		aaa[0].style.background='orange'
+	}
+	
+	
+	
+</script>

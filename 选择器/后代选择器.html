@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>后代选择器</title>
+		<style type="text/css">
+		
+			#aaa span{color:red}
+			
+			/*为#aaa中的span设置颜色为红色
+			 后代元素选择器
+			 作用：选中指定元素的指定后代元素
+			 语法：父元素 子元素{}*/
+		</style>
+	</head>
+	<body>
+		<div id="aaa">
+			<p>div标签中的p标签</p>
+			<span>div标签中的span标签</span>
+			<p><span>p标签中的span</span></p>
+		</div>
+		<div>
+			<span>000000000</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>样式的继承</title>
+		<style type="text/css">
+			p{font-size:30px;}
+		</style>
+	</head>
+	<body>
+		<p>
+			pppppppppp<br />
+			<span>0000000000</span>
+		</p>
+		<span>111111111</span>
+		<!--在css中，祖元素上的样式能被后代元素继承
+			利用继承可以将一些基本样式设置给祖元素，这样后代元素将会自动继承
+			
+			并不是所有样式都会被子元素继承
+			比如：背景颜色（所有与背景相关的）、边框、定位
+			---------背景的默认属性为transparent透明的，所以子元素虽然没有继承，但因为背景默认透明，祖元素的背景会透过来，网页中显示也会看着子元素和祖元素一样
+		-->
+	</body>
+</html>

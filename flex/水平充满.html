@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS布局01</title>
+
+    <style type="text/css">
+        body{
+            background-color: #cccccc;
+        }
+		*{
+			padding: 0;
+			margin: 0;
+		}
+        .container{
+            display: flex;
+        }
+
+        .item_1{
+            flex: 1;
+            background-color: burlywood;
+            text-align: center;
+        }
+
+        .item_2{
+            flex: 1;
+            background-color: burlywood;
+            text-align: center;
+        }
+        
+        
+        .item_3{
+            flex: 1;
+            background-color: burlywood;
+            text-align: center;
+        }
+
+        .item_normal{
+        	width: 100px;
+        	text-align: center;
+            background-color: coral;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<h3 style="text-align: center ">多个元素，按一定比例布局</h3>
+
+<div class="container">
+    <div class="item_1">
+        <span>第一个元素</span>
+    </div>
+    <div class="item_2">
+        <span>第二个元素</span>
+    </div>
+    <div class="item_1">
+        <span>第三个元素</span>
+    </div>
+
+</div>
+
+<h3 style="text-align: center ">部分元素自适应大小，某个元素填充剩余空间</h3>
+
+<div class="container">
+    <div class="item_normal">
+        <span>元素1</span>
+    </div>
+    <div class="item_3">
+        <span>元素2，填满剩余空间</span>
+    </div>
+    <div class="item_normal">
+        <span>元素3</span>
+    </div>
+    
+    <div class="item_normal">
+        <span>元素3</span>
+    </div>
+
+</div>
+
+</body>
+</html>

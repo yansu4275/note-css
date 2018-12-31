@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>伪类选择器</title>
+		<style type="text/css">
+			a:link{color:red}
+			a:visited{color:green}
+			a:hover{background-color:yellow}
+			a:active{background-color:blue;}
+			input:focus{background-color:orange}
+			a::selection{background-color:green}
+		</style>
+	</head>
+	<body>
+		<a href="http://www.baidu.com">访问过的链接</a><br />
+		<a href="http://www.baidu.com/11111111111111">没访问过的链接</a><br />
+		<input type="text" />
+	</body>
+</html>
+<!--伪类专门用来表示元素的一种特殊状态
+	比如：:vistied，访问过的链接-----------------由于涉及隐私，vistied只能设置字体颜色
+	     :link，未访问过的链接，正常的超链接
+	     :hover，鼠标滑过的链接------------------ie6中只能设置超链接
+	     :active，正在点击的链接-----------------ie6中只能设置超链接
+	     :focus，获取焦点的状态------------------ie6不支持
+	     ::selection，为选择修改样式-------------ie6不支持，火狐中用::-moz-selection代替
+-->

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box1{width:200px;height:200px;
+			background-color:red;}
+
+/*定位：将指定元素摆放在页面任意位置	相对定位
+               通过定位可以任意摆放元素
+ position设置定位
+    static：默认值，元素没有开启定位
+    relative：相对定位
+    absolute：绝对定位
+    fixed：开启固定定位，也是绝对定位的一种
+    
+开启了元素定位，可通过left、right、top、bottom设置偏移量*/
+   
+/*relative
+ 1.开启了相对定位但没设置偏移量，元素不会变化
+ 2.相对定位是相对原来位置移动
+ 3.相对定位不会脱离文档流
+ 4.相对定位会是元素提升一个层级，会盖住其他元素
+ 5.相对定位不会改变元素性质*/   			
+			.box2{width:200px;height:200px;
+			background-color:yellow;
+			position:relative;
+			left:100px;
+			top:150px;}
+			
+			.box3{width:200px;height:200px;
+			background-color:green;}
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+	</body>
+</html>

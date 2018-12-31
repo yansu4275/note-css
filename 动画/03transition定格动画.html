@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+
+			.aaa{
+				width: 200px;
+				height: 200px;
+				border: solid 2px red;
+				
+				/*transition---------------------过渡属性、时间、动画曲线、延迟时间*/
+				
+/*				transition: width 2s,height 2s ease;
+				-moz-transition: width 2s,height 2s ease; 
+				-webkit-transition: width 2s,height 2s ease; */
+				
+				transition: all 1s ease ;
+				-moz-transition: all 1s ease; /* Firefox 4 */
+				-webkit-transition: all 1s ease; /* Safari 和 Chrome */
+			}
+			
+			.aaa:hover{
+				width: 400px;
+				
+			}
+			
+			.ccc{
+				width: 400px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>transition 定格动画</h1>
+		<h3>hover动画和click动画都会触发transitionend完毕动画</h3>
+		<div class="aaa"></div>
+		<button class="bbb">开始</button>
+	</body>
+</html>
+<script type="text/javascript">
+	window.onload=function(){
+		var aaa = document.getElementsByClassName('aaa')
+		var bbb = document.getElementsByClassName('bbb')
+		
+		//执行动画
+		bbb[0].onclick=function(){
+			aaa[0].classList.add('ccc')
+		}
+		
+		//动画执行完毕
+		aaa[0].addEventListener('transitionend',myfunction)
+		aaa[0].addEventListener('webkitTransitionEnd',myfunction)
+		function myfunction(){
+			this.innerHTML='动画完毕后变色、宽度400'
+			aaa[0].style.background='#ADFF2F'
+			aaa[0].style.width='400px'
+			
+		}
+		
+		
+		
+	} 
+</script>

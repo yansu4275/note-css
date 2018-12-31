@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+<!--框架集和内联框架类似，都用于在页面中引入其他外部页面
+	框架集可以同时引入多个页面，内联框架只能引入一个
+	
+	frameset和iframe一样，里面的内容不能被搜索引擎检索
+	使用框架集则意味着页面中不能有自己的内容，只能引入其他页面
+	    引入几个页面就要发送几次请求，访问速度慢，用户体验差
+	    
+	    如果非要使用建议使用frameset，不推荐iframe
+	
+	使用frameset创建框架集，
+	注意：frameset不能喝body出现在同一个页面中
+	     frameset中可以嵌套frameset
+-->		
+
+<!--属性：rows：指定框架集中所有框架一行一行排列
+	     cols：指定框架集中所有框架一列一列排列
+	这两个属性必须选择一个，并且指定大小     
+-->
+		<frameset rows="30%, *, 30%">
+
+<!--在frameset中使用frame标签指定要引入的页面-->		
+
+			<frame src="../表格/1.table表格.html"/>
+			<frame src="../表格/2.合并单元格.html"/>
+			
+			<frameset cols="50%,50%">
+			<frame src="../表格/3.表格样式.html"/>
+			<frame src="../表格/4.长表格.html"/>
+				
+			</frameset>
+			
+		</frameset>
+
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" charset ="UTF-8">
+		<title>table表格</title>
+		<style>
+		    td{color:red}
+			.aaa{border:3px solid green}
+			.bbb{background-color:yellow}   /*基数行黄底*/
+			.ccc,th{font-size:30px}        /*并集选择器*/
+		</style>
+		<!--
+			tbody：加上tbody，意思为表格会下载完再显示，没有就是下载点显示点
+			tr：表格的一行，有几组tr表格就有几行
+			th：表格头部的一个单元格，表格表头
+			td：表格的几个单元格
+		-->
+	</head>
+	<body>
+		<h2><em>表格</em></h2>
+		<!--
+			cellspacing="" ---------------------单元格外边距
+			cellpadding="" ---------------------单元格内边距
+		-->
+		<table class="aaa"  border="" cellspacing="1" cellpadding="20">
+			<tbody>
+				<tr>
+					<th>序号</th>
+					<th>姓名</th>
+					<th>地址</th>
+				</tr>
+				<tr class="bbb">
+					<td>1</td>
+					<td>**</td>
+					<td>南京</td>
+				</tr>
+				<tr class="ccc">
+					<td>2</td>
+					<td>***</td>
+					<td>北京</td>
+				</tr>
+				<tr class="bbb">
+					<td>3</td>
+					<td>****</td>
+					<td>东京</td>
+				</tr>
+			</tbody>
+		</table>
+		
+	</body>
+</html>

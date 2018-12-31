@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+/*background-image:url(相对路径)
+    1. 元素比图片小时，从图片左上角开始部分显示
+        可以将元素修改和图片一样大
+    2.元素比图片大时，图片会默认复制平铺充满元素*/
+  
+/*一般同时设置背景图片和颜色，这样图片没加载好时可以先看到颜色*/		
+			.bbb{width:500px;height:500px;
+			background-color:yellow;
+			background-image:url(2.png);
+			
+			background-repeat:repeat-x;}
+			
+/*background-repeat，图片重复方式
+        repeat:默认值，平铺
+        no-repeat:背景图片不会平铺
+        repeat-x：背景图片沿着水平方向平铺
+        repeat-y：背景图片沿着竖直方向平铺*/			
+		</style>
+		
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+	<body>
+		<div class="aaa"></div>
+		<div class="bbb"></div>
+	</body>
+</html>

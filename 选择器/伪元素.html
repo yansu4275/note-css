@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>伪元素</title>
+		<style type="text/css">
+			p:first-letter{color:red}  /*first-letter，第一个字*/
+			p:first-line{font-size:30px}  /*first-line，第一行*/
+			
+			
+			p:before{content:"这是before位置";color:blue}
+			p:after{content:"这是after位置";color:orange}
+			/*before，标签最前边位置
+			  after，标签最后面位置 
+			    两种样式默认什么都没有，一般结合content，通过content添加内容
+			  添加的内容无法被选中*/
+			 
+			 /*ie6不支持*/
+		</style>
+	</head>
+	<body>
+		<p>00000000000000<br />
+		0000000000000000<br />
+		0000000000000000<br />
+		0000000000000000<br />
+		0000000000000000<br />
+		0000000000000000<br />
+		0000000000000000<br />
+		</p>
+	</body>
+</html>

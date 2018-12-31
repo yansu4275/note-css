@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>后代选择器</title>
+		<style type="text/css">
+            #aaa>p>span{background-color:yellow}
+            /*选中id为aaa的div中p元素中的span元素，背景设为黄色
+                            子元素选择器
+                            作用：选中指定父元素中的指定子元素
+                            语法：父元素>子元素{}*/
+		</style>
+	</head>
+	<body>
+		<div id="aaa">
+			<p>div标签中的p标签</p>
+			<span>div标签中的span标签</span>
+			<p><span>p标签中的span</span></p>
+		</div>
+		<div>
+			<span>000000000</span>
+		</div>
+	</body>
+</html>

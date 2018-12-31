@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>textarea文本域</title>
+		<!--
+			格式：<textarea name="****" rows="行数" cols="列数">文本</textarea>
+			
+			name：对文本内容的解释
+			rows：行数，可用height代替
+			cols：列数，可用width代替
+		-->
+		
+		<style type="text/css">
+			textarea{
+				resize: none;
+/*去除文本框右下角放大缩小标志*/				
+			}
+		</style>
+	</head>
+	<body>
+		<form action="save.php" method="post">
+			个人简介
+			
+			<div>
+			<textarea name="个人简介" rows="20" cols="30">在这里输入内容...</textarea>	
+			</div>
+
+			<input type="submit" name="submit" value="确定" />
+			<input type="reset" name="reset" value="重置" />
+		</form>
+	</body>
+</html>

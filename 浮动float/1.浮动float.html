@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+/*如果希望块元素在页面中水平排列，可以使块元素脱离文档流
+  float：none：默认值，元素默认在文档中排列
+         left：元素脱离文档流，向左排列
+         right：元素脱离文档流，向右排列*/
+
+/*元素设置浮动后，元素会立即脱离文档流
+  下面的元素怒会立即向上移动
+  元素脱离文档流会向左上或右上浮动，直到父元素边框或其他浮动元素*/
+
+/*如果浮动元素上面是一个没有浮动的块元素，则浮动元素不会超过块元素
+ ie6浮动元素上面无论是什么元素都会在下面*/         		
+			.aaa{width:200px;height:200px;
+			     background-color:red;}
+			     
+			.bbb{width:200px;height:200px;
+			     background-color:yellow;
+			     float:right}
+			     
+			.ccc{width:200px;height:200px;
+			     background-color:green;
+			     float:right;}
+			     
+/*浮动的元素不会超过上边的兄弟元素，最多一边齐*/
+            .ddd{width:200px;height:200px;
+			     background-color:blue;}
+			     
+			.eee{width:200px;height:200px;
+			      background:#bfa;
+			      float:right;}     
+		</style>
+	</head>
+	<body>
+		<div class="aaa">aaa未浮动</div>
+		<div class="bbb">bbb</div>
+		<div class="ccc">ccc</div>
+		
+		<div class="ddd">ddd</div>
+		<div class="eee">eee</div>
+	</body>
+</html>

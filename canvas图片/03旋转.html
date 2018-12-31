@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="mycanvas" width="500px" height="500px"></canvas>		<hr />
+		<script type="text/javascript">
+				var c =document.getElementById('mycanvas')
+				var ctx = c.getContext('2d')
+				
+				ctx.fillStyle='#ccc'
+				
+				// 旋转 30 度
+				ctx.rotate(30 * Math.PI/180 )
+				
+				ctx.fillRect(0,0,100,100)
+		</script>
+	</body>
+</html>

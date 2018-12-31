@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+/*margin：外边距指当前盒子与其他盒子之间的距离
+          margin-xxxx*/
+         
+/*由于页面中元素都是靠左靠上摆放的
+  所以当设置上、左外边距时改变自身位置
+         当设置右、下外边距时会改变其他盒子位置*/
+			.aaa{width:200px;height:200px;background-color:#bfa;
+			     border:10px solid red;
+			     margin-top:-100px;     /*可以将值设置为负值，向反方向移动*/
+			     margin-bottom:100px}   /*设置aaa右、下外边距100px，bbb被向下挤了100px*/			     
+			     
+			.bbb{width:100px;height:100px;background-color:yellow;
+			     margin-right:auto;     /*左右设置为auto指最大值*/
+			     margin-top:auto}       /*上下设置auto指最小值*/
+			    
+/*左右都设置为auto可使子元素在父元素中水平居中*/			    
+			.ccc{width:100px;height:100px;background-color:red;
+			     
+			     margin-left:auto;margin-right:auto;}
+  
+		</style>
+	</head>
+	<body> 
+		<div class="aaa"></div>
+		<div class="bbb"></div>
+		<div class="ccc"></div>
+	</body>
+</html>

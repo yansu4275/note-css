@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+/*通过设置伪类，给不同伪类设置不同图片，达到按钮的动态效果*/
+
+/*作完后第一次切换图片会出现一次闪烁
+ 原因：图片是以外部资源形式加载进页面，每加载一次外部资源会单独发送一次请求，
+      但外部资源不是同时加载，浏览器会在使用外部资源时再加载
+   浏览器一上来只加载了link，没有加载hover、active
+   鼠标移动触发时加载图片需要时间，所以会有延迟闪烁*/		
+
+			.aaa:link{display:block;/*a为内联元素，转成块元素设置宽高*/
+			width:38px;height:39px;
+			background-image:url(link.png);
+			background-repeat:no-repeat;}
+			
+			.aaa:hover{background-image:url(hover.png)}
+			
+			.aaa:active{background-image:url(active.png)}
+			
+			.bbb:link{display:block;
+			width:38px;height:39px;
+			background-image:url(000000.png);}
+			
+			.bbb:hover{background-position:38px 0px;}
+			
+			.bbb:active{background-position:76px 0px}
+		</style>
+	</head>
+	<body>
+		<a href="#" class="aaa"></a>
+		
+		<a href="#" class="bbb"></a>
+	</body>
+</html>

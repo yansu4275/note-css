@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-3.2.0.js"></script>
+	</head>
+	<body>
+		<!--<audio id="aaa" src="超神学院动画 - 战争之后.mp3" controls>
+			你的浏览器不支持audio
+		</audio>
+		<button class="play" onclick="aaa()">播放</button>-->
+		
+		<button onclick="playVid()" type="button">播放视频</button>
+		<button onclick="pauseVid()" type="button">暂停视频</button>
+		<br />
+		<br />
+		<audio id="audio1" controls loop>
+		  	<source src="3min.mp3" type="video/mp4">
+		  	Your browser does not support HTML5 video.
+		</audio>
+		
+		<script>
+			var myAudio=document.getElementById("audio1");
+			
+			function playVid()
+			  {
+			  	myAudio.play();
+			  }
+			
+			function pauseVid()
+			  {
+			  	myAudio.pause();
+			  }
+			  
+			  
+			
+		  	timer=setTimeout(function(){
+		  		console.log('三秒了')
+		  		$('#audio1').get(0).play()
+			},1000)
+		  	
+		  	// 监控音频播放完成-------js
+		  	var aud = document.getElementById("audio1");
+			aud.onended = function() {
+			    alert("音频播放完成");
+			};
+			
+			// 监控音频播放完成-------jq
+//			$('#audio1').bind('ended' , function(){
+//				console.log('音频播放完成')
+//			})
+		</script>
+		
+		
+		<hr />
+		<hr />
+		<hr />
+		<hr />
+		
+		<h4>苹果系统定时播放</h4>
+		<h4>微信 JS-SD ，必须引入下面的 js ，而且只能播放一段音频</h4>
+		
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		
+		<audio src="/v2static/msg/3min.mp3" controls id="aaa"></audio>
+		<hr>
+		<button onclick="aaa()">00000000</button>
+
+		<script type="text/javascript">
+			function autoPlayAudio1() {
+				$('button').html('播放')
+				$('#aaa').get(0).play()
+		        wx.config({
+		            // 配置信息, 即使不正确也能使用 wx.ready
+		            debug: false,
+		            appId: '',
+		            timestamp: 1,
+		            nonceStr: '',
+		            signature: '',
+		            jsApiList: []
+		        });
+		        wx.ready(function() {
+		            document.getElementById('aaa').play();
+		        });
+		    }
+
+		    setTimeout(function(){
+		    	autoPlayAudio1()
+		    },2000)
+
+
+		</script>
+		
+		
+		
+	</body>
+</html>

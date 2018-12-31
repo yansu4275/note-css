@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-3.2.0.js"></script>
+	</head>
+	<body>
+		
+		<p>.fillStyle=	------   填充颜色</p>
+		<p>.strokeStyle=	------   边框颜色</p>	
+		<p>beginPath() -------开始</p>
+		<p>closePath() -------结束，封闭各个坐标点</p>
+		<p>fillRect() -------实心矩形（右偏移，下偏移，宽，高）</p>
+		<p>strokRect() -------空心矩形（右偏移，下偏移，宽，高）</p>
+		<hr />
+		
+		11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+		<canvas id="mycanvas1" width="500px" height="500px"></canvas>		<hr />
+		<script type="text/javascript">
+				var c1 =document.getElementById('mycanvas1')
+				
+				// 2d环境
+				var c1tx = c1.getContext('2d')
+				
+				// 设置颜色
+				c1tx.fillStyle='#ccc'
+				
+				// 设置坐标和大小，前两个是向右、向下的偏移量，后两个是宽高
+				c1tx.fillRect(50,50,100,100)
+				
+			/*	也可以写成
+				c1tx.rect(0,0,100,100)
+				c1tx.fill()*/
+		</script>
+		
+		22222222222222222222222222222222222222222222222222222222222222222222222222222222222222222		
+		<canvas id="mycanvas2" width="" height=""></canvas>		<hr />
+		<script type="text/javascript">
+				var c2 =document.getElementById('mycanvas2')
+				var c2tx = c2.getContext('2d')
+		
+				// 绘制直线
+				c2tx.moveTo(0,0);           /*开始坐标*/
+				c2tx.lineTo(100,150)           /*开始坐标*/
+				c2tx.stroke()
+		</script>
+		
+		333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333		
+		<canvas id="mycanvas3" width="" height=""></canvas>		<hr />
+		<script type="text/javascript">
+				var c3 =document.getElementById('mycanvas3')
+				var c3tx = c3.getContext('2d')
+				
+				c3tx.fillStyle='#ccc'
+				c3tx.beginPath()					/*开始*/
+				
+				// 圆心坐标，半径，开始角度，结束角度Math.PI*2--360度，顺时针
+				c3tx.arc(50,50,40,0,Math.PI*1,true)
+				c3tx.closePath()					/*结束*/
+				c3tx.fill()							/*颜色填充*/
+		</script>
+		
+		444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444		
+		<canvas id="mycanvas4" width="" height=""></canvas>		<hr />
+		<script type="text/javascript">
+				var c4 =document.getElementById('mycanvas4')
+				var c4tx = c4.getContext('2d')
+				
+				c4tx.strokeStyle='red,strong'
+				
+				c4tx.beginPath()
+				c4tx.moveTo(25,25)
+				c4tx.lineTo(150,25)
+				c4tx.lineTo(25,150)
+				c4tx.closePath()
+				c4tx.stroke()
+		</script>
+		
+		
+		
+		
+	</body>
+</html>

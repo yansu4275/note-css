@@ -1,0 +1,84 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Document</title>  
+    <!--适应手机-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+    
+     <style type="text/css">
+     	*{
+     		padding: 0px;
+     		margin: 0px;
+     	}
+     	
+     	body{
+     		min-width: 300px;
+     	}
+     	.wai{
+     		box-sizing: border-box;
+     		min-width:  300px;
+     		max-width: 750px;
+     		height: 1000px;
+     		margin: auto;
+     		background: #ccc;
+     		
+     	}
+     	.aaa{
+     		padding: 1rem ;
+     	}
+     	img{
+     		width: 12.8rem;
+     		height: 8.02rem;
+     		margin: auto;
+     		float: left;
+     	}
+     	
+     	.bbb{
+     		display: inline-table;
+     		float: left;
+     		padding: 0 0 0 1.4rem;
+     	}
+     	p{
+     		font-size: 1.2rem;
+     		line-height: 1.2rem;
+     		background: red;
+     	}
+     	a{
+     		font-size: 1.2rem;
+     		line-height: 1.2rem;
+     		text-decoration: none;
+     	}
+     	a:active{
+     		color: #000;
+     	}
+     </style>
+  
+</head>  
+<body>  
+	<div class="wai">
+		<div class="aaa">
+			<img src="img/base_banner@2x.png"/>		
+			<div class="bbb">
+				<p>上海市杨浦区五角场大学625号</p>
+				<a href="">0000000000000</a>
+			</div>
+		</div>
+		
+	</div>
+</body>  
+</html>  
+
+<script src="jquery.min-1.8.js"></script>
+<script type="text/javascript">  
+    //$(window).width();  
+    function resize(){  
+    	//UI图为375px时设置1rem = 10px，自动随屏幕变化，可根据UI自定义
+        $('html').css('font-size',($('.wai').width())/37.5+'px');  
+    };  
+    window.onresize=resize;  
+      
+    $(function(){resize();});  
+    
+    
+</script> 

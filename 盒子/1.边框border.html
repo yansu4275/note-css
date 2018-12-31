@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{width:100px;
+			    height:100px;
+			    background:#bfa}
+			.aaa{border-width:10px 20px 30px 40px;
+			     border-color:red yellow green blue;
+			     border-style:solid}
+			/*border-width后设置四个数字，border-color后设置四种颜色，上右下左分别对应*/
+			 
+			.bbb{border-width:10px 20px 30px;
+			     border-color:red yellow blue;
+			     border-style:solid}			
+			/*border-width后设置三个数字，border-color后设置三种颜色，第二个表示左右*/ 
+			
+			.ccc{border-width:10px 20px;
+			     border-color:red yellow;
+			     border-style:solid}  
+			/*border-width后设置两个数字，border-color后设置两种颜色，分别表示上下和左右*/ 
+			
+			           
+		</style>
+	</head>
+	<body>
+		<div class="aaa">border-width后四个数字</div><br />
+		<div class="bbb">border-width后三个数字</div><br />
+		<div class="ccc">border-width后两个数字</div><br />
+		
+		<!--也可以通过border-xxx-width分别对边框宽度进行设置
+			.........border-xxx-color........颜色........
+			.........border-xxx-style........样式........
+			xxx值为：top right bottom left
+			
+			border-style:none-------默认值，无边框
+			             solid-------实线
+			             dotted-------点状边框
+			             dashed-------虚线
+			             double-------双线
+		-->
+
+	</body>
+</html>

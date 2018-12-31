@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{background: #BBFFAA;}
+			.aaa{width:300px;height:200px;
+			background: no-repeat url(2.png);}
+			
+			.bbb{width:300px;height:200px;
+			background: no-repeat url(2.png);}
+			
+			.ccc{width:300px;height:200px;
+			background: no-repeat url(2.png);}
+		</style>
+	</head>
+	<body>
+<!--ie6中png24图片支持度不高，图片无法正常使用
+	解决方法：1，使用png8代替png24
+	            png8分辨率低
+	         2，使用javascript，向页面中引入一个外部js文件
+	                        然后写一个js代码，来解决该问题
+-->
+        <div class="aaa"></div>
+        <div class="bbb"></div>
+        <img src="2.png"/>
+        
+<!--在body标签的最后面引入外部js文件-->
+        <script type="text/javascript" src="******"></script>
+        
+<!--再创建一个新的script标签，并编写一些js代码-->        
+        <script type="text/javascript">
+        	DD_belatedPNG.fix("div,img");
+        </script>
+	</body>
+</html>

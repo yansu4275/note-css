@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"><!--适应手机-->
+
+	<script src="rem02.js"></script>
+	<title></title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body{
+			min-width: 300px;
+			max-width: 750px;
+		}
+		p{
+			font-size: 1rem;
+			line-height: 10rem;
+			background: red;
+		}
+		.aaa{
+			width: 1rem;
+			height: 10rem;
+			background: #ccc;
+		}
+	</style>
+
+</head>
+<body>	
+	
+	<p>1rem=10px</p>
+	
+	<div class="aaa"></div>
+	
+	
+	<span>推荐设置 <br />
+		375px下 1rem = 10px，<br />
+		750px 下 1rem = 100px
+		<hr />
+		
+		***375 设置 1rem = 10px会有问题
+		
+		<hr />
+		
+		这种方法不能设置body宽度范围，超出了最大宽度字体依然会继续变大
+	</span>
+</body>
+</html>
+
+
+
+<!--<script>
+	//手机px转rem
+	(function(doc, win) {
+		var html = doc.getElementsByTagName("html")[0],
+        	// orientationchange->手机屏幕转屏事件
+            // resize->页面大小改变事件(一边pc端有用)
+          	reEvt = "orientationchange" in win ? "orientationchange" : "resize",
+            reFontSize = function() {
+	            	var clientW = doc.documentElement.clientWidth || doc.body.clientWidth; 
+	          	if(!clientW) {
+		     	     return;
+	           	}
+	
+				//根据ui图尺寸设置rem，375px 宽度下，1rem =10px
+	           	html.style.fontSize = 10 * (clientW / 375) + "px";
+            }
+            win.addEventListener(reEvt, reFontSize);
+            // DOMContentLoaded->dom加载完就执行,onload要dom/css/js都加载完才执行
+            doc.addEventListener("DOMContentLoaded", reFontSize);
+ 	})(document, window);//高度是宽度的二倍
+</script>-->

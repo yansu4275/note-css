@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+/*display可以修改元素类型
+  可选值： inline：设置为内联元素
+         block：设置为块元素
+         inline-block：设置行内块元素，既有行内元素特点又有块元素特点                                         
+                                          既可以设置宽高又不会独占一行   “img标签”
+--------- none：不显示，并且不会再页面中占有位置  */	
+         	
+			.aaa{background-color:#bfa;
+			     width:200px;height:200px;
+			     display:block;}
+			.none{background-color:yellow;
+			     width:200px;height:200px;
+			     display:none;}
+			     
+/*visibility：可以用来设置元素隐藏和显示
+              visible：默认值，元素默认显示在页面
+              hidden：隐藏，但会占据位置*/
+            .hidden{background-color:yellow;
+                    width:200px;height:200px;
+                    visibility:hidden;} 			       
+		</style>
+	</head>
+	<body>
+		<a href="#" class="aaa">内联元素</a>
+		<a href="#" class="none">内联元素</a>
+		这里是display:none隐藏，不占据位置
+		
+		<div class="hidden">0000000000000</div>
+		上面是visibility:hidden隐藏，占据位置
+	</body>
+</html>

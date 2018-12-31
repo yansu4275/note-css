@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.aaa{width:200px;height:200px;
+			background-color:red;}
+
+/*opacity:透明度--------0~1
+    0：不透明；
+    1：全透明
+    0.5：半透明*/			
+    
+/*IE8及以下不支持opacity，用filter:alpha(opacity=透明度)
+    透明度范围0~100
+    50：半透明*/    
+
+			.bbb{width:200px;height:200px;
+			background-color:yellow;
+			position:relative;
+			left:100px;top:-100px;
+			opacity:0.5;
+			filter:alpha(opacity=50)}
+			
+			.ccc{width:200px;height:200px;
+			background-color:green;
+			position:absolute;
+			left:200px;top:200px;
+			opacity:0.5;
+			filter:alpha(opacity=50)}
+		</style>
+	</head>
+	<body>
+		<div class="aaa"></div>
+		<div class="bbb"></div>
+		<div class="ccc"></div>
+	</body>
+</html>

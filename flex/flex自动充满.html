@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			
+			.aaa{
+				width: 400px;
+				height: 400px;
+				outline: 1px #000 solid;
+			}
+			.aaa1{
+				display: flex;
+				
+				/*水平充满，两边默认外边距*/
+    			justify-content: space-around;
+    			
+				/*水平充满，两边默认无外边距*/
+    			/*justify-content: space-between;*/
+			}
+			
+			
+			.aaa2{
+				display: flex;
+				
+				/*竖直排列*/
+    			flex-direction: column;				
+				
+				/*水平充满，两边默认外边距*/
+				justify-content: space-around;
+    			
+				/*水平充满，两边默认无外边距*/
+    			/*justify-content: space-between;*/
+			}
+			
+			.bbb{
+				width: 50px;
+				height: 50px;
+				/*background: #ccc;*/
+				
+				
+				display: flex;
+				align-items: center;				/*竖直居中*/
+    			justify-content: center;			/*水平居中*/
+			}
+			.ccc{
+				background: orange;
+			}
+			.ddd{
+				background: yellowgreen;
+			}
+		</style>
+	</head>
+	<body>
+		<p>行内标签不设置水平的的话会出现高度充满父标签情况</p>
+		<p>水平设置自动排列</p>
+		<div class="aaa aaa1">
+			<div class="bbb">b</div>
+			<p style="background: red;">11111111111111</p>
+			<div class="ccc bbb">c</div>
+			<div class="ddd bbb">d</div>
+		</div>
+		
+		
+		<p>竖直设置自动排列</p>
+		<div class="aaa aaa2">
+			<div class="bbb">b</div>
+			<div class="ccc bbb">c</div>
+			<div class="ddd bbb">d</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<h4>source-over---------新图形在上（默认）</h4>
+		<h4>source-atop---------****************，去掉新图形不重合部分</h4>
+		<h4>source-in-----------*****************，只显示重合部分</h4>
+		<h4>source-out---------******************，只显示新图形不重合部分</h4>
+		<hr />
+		
+		<h4>destination-over---------新图形在下</h4>
+		<h4>destination-atop---------***********，去掉旧图形不重合部分</h4>
+		<h4>destination-in----------************，只显示重合部分</h4>
+		<h4>destination-out---------************，只显示旧图形不重合部分</h4>
+		<hr />
+		
+		<h4>lighter--------------------------重合部分变色</h4>
+		<h4>copy-----------------------------只显示新图形</h4>
+		
+		<hr />
+		<canvas id="mycanvas" width="500px" height="500px"></canvas>		<hr />
+		<script type="text/javascript">
+				var c =document.getElementById('mycanvas')
+				var ctx = c.getContext('2d')
+				
+				// 原图形
+				ctx.fillStyle='#ccc'
+				ctx.fillRect(100,100,200,200)
+				
+				
+				ctx.globalCompositeOperation = 'destination-in'
+				
+				
+				
+				// 新图形
+				ctx.fillStyle='red'
+				ctx.beginPath()					/*开始*/
+				ctx.arc(300,300,100,0,Math.PI*2,true)
+				ctx.closePath()					/*结束*/
+				ctx.fill()							/*颜色填充*/
+		</script>
+	</body>
+</html>

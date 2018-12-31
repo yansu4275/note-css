@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.aaa{width:200px;height:200px;background-color:#BFA;
+			     border:10px red solid;
+			     
+			     padding-top:100px;
+			     padding-left:100px;}/*上内边距和左内边距分别为100px*/
+			
+			.bbb{width:100%;height:100%;background-color:yellow;}/*在aaa中设置一个子元素bbb，bbb占满aaa*/  
+			
+/*padding简写,和 border-width 规则一样*/	
+           .ccc{width:200px;height:200px;background-color:#BFA;
+			     
+			     padding:20px 40px 60px;}	
+			     
+			     
+			     
+			
+			
+		</style>
+	</head>
+	<body>
+		<div class="aaa">
+			<div class="bbb"></div>
+		</div>
+		<br />
+		
+		<div class="ccc">
+			<div class="bbb"></div>
+		</div>
+		
+<!--padding会影响盒子可见框的大小，元素背景会延伸到内边距-->
+
+
+
+
+
+
+	</body>
+</html>

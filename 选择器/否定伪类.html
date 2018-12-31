@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>否定伪类</title>
+		<style type="text/css">
+			p:not(.aaa){color:red;}
+			/*为所有p标签设置字体红色，除了class值为aaa的
+			 
+			 * 否定伪类
+			 * 作用：从选中的元素中剔除某些元素
+			 * 语法：：not(选择器){*****}*/
+		</style>
+	</head>
+	<body>
+		<p>这是一个p标签</p>
+		<p>这是一个p标签</p>
+		<p class="aaa">这是一个p标签</p>
+		<p>这是一个p标签</p>
+		<p>这是一个p标签</p>
+	</body>
+</html>

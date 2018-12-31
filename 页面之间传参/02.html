@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p>通过 getUrlParam('') 获取到已经知道name的值</p>
+		
+		<script language="JavaScript" type="text/javascript"> 
+			function getUrlParam(name) {
+				//构造一个含有目标参数的正则表达式对象
+			 	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); 
+			 	
+			 	//匹配目标参数
+			 	var r = window.location.search.substr(1).match(reg); 
+			 	if (r != null) 
+			 	
+			 	//返回参数值
+			 	return unescape(r[2]); 
+			 	return null; 
+			}
+			
+			var aaa = getUrlParam('b')
+			console.log(aaa)
+		</script>
+		
+		
+		
+		<script type="text/javascript">
+			var url = window.location.href;
+			console.log(url)
+			
+			// 通过split()分割为数组
+			var arr1 = url.split('?')[1].split('&')
+			function getJson(arr){
+			    var theRequest = new Object();
+			    for (var i = 0; i < arr.length; i++) {
+			        var kye = arr[i].split("=")[0]
+			        var value = arr[i].split("=")[1]
+			        // 给对象赋值
+			        theRequest[kye] = value
+			    }
+			    return theRequest;
+			}
+			
+			// {a: "1", b: "2", c: ""}，js数据
+			console.log('js 数据：' + getJson(arr1).a)  
+			
+			// {"a":"1","b":"2","c":""}
+//			console.log('json：' + JSON.stringify(getJson(arr1)))  
+			var a = JSON.stringify(getJson(arr1)) 
+			var b = JSON.parse(a)
+			console.log(b)
+//			var json2 = JSON.parse(json1);
+			
+		</script>
+		
+		
+	</body>
+</html>

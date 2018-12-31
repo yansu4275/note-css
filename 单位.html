@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			html{
+				font-size: 20px;
+			}
+			.aaa{
+				width: 10rem;
+				height: 10rem;
+				background: #ccc;
+			}
+			.bbb{
+				font-size: 40px;
+				background: #CCCCCC;
+				line-height: 2em;
+			}
+			.ccc{
+				width: 100vw;
+				height: 10vh;
+				background: #ccc;
+			}
+			.ddd{
+				background: #CCCCCC;
+				width: 50vmin;
+				height: 50vmax;
+			}
+		</style>
+	</head>
+	<body>
+		<p>rem---通过根元素 html 的 font-size 值进行适配，1rem = 20px，内容字体大小也会自动适配</p>
+		<div class="aaa"></div>
+		<hr />
+		
+		
+		<!--***********************************************************-->
+		<p> em </p>
+		<p class="bbb">em设置单位，以本身的字体大小 px 为准，1em = 40px</p>
+		<hr />
+		
+		
+		<!--***********************************************************-->
+		<p>vh、vw</p>
+		<div class="ccc">
+			<p>vw：将屏幕宽度等分为100份</p>
+			<p>vh：将屏幕高度等分为100份</p>
+		</div>
+		<hr />
+		
+		
+		<!--***********************************************************-->
+		<p>vmax、vmin</p>
+		<div class="ddd">
+			<p>vmax：相对于视口的宽度或高度中较大的那个被均分为100单位</p>
+			<p>vmin：相对于视口的宽度或高度中较小的那个被均分为100单位</p>
+		</div>
+				
+		
+	</body>
+</html>

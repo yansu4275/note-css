@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>兄弟元素选择器</title>
+		<style type="text/css">
+			span+p{color:red}
+			/*位span后的一个p元素设置字体红色
+			 后一个兄弟元素选择器
+			 ----作用：可以选中一个元素后紧挨着的指定兄弟元素
+			 ----语法：前一个+后一个{****}*/
+			
+			
+			div~p{color:blue}
+			/*为div后所有p元素设置字体为绿色
+			 ----作用：选中后面所有元素
+			 ----语法：前一个~后一个{****}*/
+			
+		</style>
+	</head>
+	<body>
+		first-of-type-----nth-of-type(1)-----同一个父元素中，第几个某元素
+		<p>0000000</p>
+		<span>spanspanspan</span>
+		<p>0000000</p>
+		<p>0000000</p>
+		
+		<hr />
+		<div>divdivdivdiv</div>
+		<p>pppppppppppp</p>
+		<p>pppppppppppp</p>
+		<p>pppppppppppp</p>
+		<span>span</span>
+		<p>pppppppppppp</p>
+		
+	</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<i>i标签，斜体，无语义</i><br />
+		<b>b标签，加粗，无语义</b><br />
+		<u>u标签，下划线</u>
+		<hr /><hr />
+		<!--h5规范中，对于不需要着重的内容，i b u-->
+		
+		今天天气<em>em斜体，预期强调</em><br />
+		<strong>strong加粗，内容强调</strong>
+		<hr />
+		<!--em和strong都表示强调
+			em表示语气上的前调，重音，默认使用斜体
+			strong表示内容上的强调，比em更强烈，默认粗体-->
+			
+		
+		<small>small标签，内容比父元素小一些</small>
+		<hr />
+		<!--small标签中的内容比父元素中文字小一些
+			在h5中small标签表示一些细则一类的内容
+			比如：合同中的小字，网站版权声明-->
+		
+		<cite>《网页中加书名号的内容，默认斜体》</cite><br />
+		子曰：<q>q表示行内引用，默认加引号</q><br />
+		块级引用：<blockquote>blockquote表示块级引用，默认独占一行</blockquote>
+		<hr />
+		<!--cite:网页中所有加书名号的内容都可以使用cite，默认斜体
+			q：表示短引用（行内引用），默认加引号
+			blockquote：长引用（块级引用），默认独占一行-->
+		
+		10<sup>2</sup>
+		科比<sup><a href="#">[1]</a></sup></p>
+		<!--sup设置上标-->
+		H<sub>2</sub>O<!--sub设置下标-->
+		<hr />
+		
+		<p><del>9999</del>   8888</p>
+		<hr />
+		<!--del：表示删除的内容，默认删除线
+			比如淘宝原价-->
+		
+		<p>今天是<ins>星期一</ins></p>
+		<hr />
+		<!--ins：表示插入的内容，默认下划线-->
+		
+		<pre><code>
+p{
+	color:red;
+	font-size；20px
+}
+		</code></pre>
+		<hr />
+		<!--pre：预格式标签，会将内容的格式完全保留，比如需要在页面中直接编写一些代码
+			code表示内容是代码，无语义，通常与pre一起用
+			----<pre><code>***********</code></pre>-->
+	</body>
+</html>

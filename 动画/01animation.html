@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+/*			@-webkit-keyframes -----safari和谷歌*/
+/*			@-o-keyframes-----opera*/
+			
+			@keyframes myfirst{
+				/*from{
+					width: 200px;
+				}
+				to{
+					width: 400px;
+				}*/
+				0{
+					/*width: 180px;*/
+				}
+				/*20%{
+					width: 230px;
+					background: #0000FF;
+				}
+				40%{
+					width: 280px;
+					background: orange;
+				}
+				60%{
+					width: 320px;
+					background: yellow;
+				}	
+				80%{
+					width: 380px;
+					background: black;
+				}	*/
+				100%{
+					/*width: 400px;*/
+					background: red;
+				}				
+				
+			}
+			
+			.aaa{
+				width: 200px;
+				height: 200px;
+				border: solid 2px red;
+				
+				/*animation: 动画函数、运行时间、运行方式、延迟时间、运行次数、是否返回;*/
+				/*返回*/
+				animation: myfirst 2s ease 1s infinite alternate;
+				
+				/*从头开始*/
+				/*animation: myfirst 1s ease 1s infinite;*/
+				
+				/*刷新时不执行*/
+				animation-play-state: running;
+			}
+			
+			/*运行方式
+			 * linear---------匀速
+			 * ease-----------默认。低速开始，加快，变慢
+			 * ease-in--------低速开始
+			 * ease-out-------低速结束
+			 * ease-in-out----低速开始、结束
+			 * cubic-bezier(n,n,n,n)------n:0~1
+			 */
+		</style>
+	</head>
+	<body>
+		<h1>ie9及以下不支持</h1>
+		<div class="aaa"></div>
+		<button class="bbb">运行</button>
+		<button class="ccc">停止</button>
+	</body>
+</html>
+<script type="text/javascript">
+	window.onload=function(){
+		var aaa = document.getElementsByClassName('aaa')
+		var bbb = document.getElementsByClassName('bbb')
+		var ccc = document.getElementsByClassName('ccc')
+		
+		bbb[0].onclick=function(){
+			aaa[0].style.animationPlayState='running'
+		}
+		ccc[0].onclick=function(){
+			aaa[0].style.animationPlayState='paused'
+		}
+		 
+	} 
+</script>

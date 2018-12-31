@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">	
+			.aaa{border:solid 2px black;}
+			
+			.bbb{width:100px;height:100px;
+				background-color:blue;
+				float:left;}
+
+/*通过after伪类选中父元素的最后面*/			
+			/*.aaa:after{content:"";
+			display:block;
+			clear:both;}*/
+			
+/*ie6不支持after伪类*/
+
+
+			 .ccc{width:300px;height:300px;
+				background: red;}
+			.ddd{width:100px;height:100px;
+				background-color:green;		
+				margin-top:100px;}
+
+/*经过修改后的clearfix，既能解决高度塌陷，又能确保父子元素外边距不重叠*/			
+			.clearfix:before,.clearfix:after{
+				content:"";
+				display:table;
+				clear:both;
+				zoom: 1;}
+		</style>
+	</head>
+	<body>
+		<div class="aaa clearfix">
+			<div class="bbb"></div>
+		</div>
+		
+		<div class="ccc  clearfix">
+			<div class="ddd"></div>
+		</div>
+		
+	</body>
+</html>

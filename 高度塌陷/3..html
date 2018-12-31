@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+/*在高度塌陷的父元素后面添加一个空白的div
+ 由于这个div并没有浮动，所以可以撑开父元素
+ 然后对其清除浮动， 基本没有副作用
+但会在页面中添加多余结构*/		
+			.aaa{border:solid 2px red;}
+			
+			.bbb{width:100px;height:100px;
+			background-color:blue;
+			float:left;}
+			
+			.ccc{clear:both;}
+		</style>
+	</head>
+	<body>
+		<div class="aaa">
+			<div class="bbb"></div>
+			<div class="ccc"></div>
+		</div>
+	</body>
+</html>

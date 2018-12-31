@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.aaa{width:200px;
+			     height:200px;
+			     background-color:#bfa;
+			     
+			     border:10px red solid;}
+/*border:可以同时设置边框的宽度、颜色、颜色
+	          没有顺序要求，border只能同时指定四个边框*/
+	         
+			.bbb{width:200px;
+			     height:200px;
+			     background-color:#bfa;
+			     
+			     border-left:10px red solid;}
+/*border-xxxx分别指定一条边，xxxx值为：top,right,left,bottom*/
+
+			 .ccc{width:200px;
+			     height:200px;
+			     background-color:#bfa;
+			     border:10px red solid;
+			     border-left:none}
+/*用border设置完四个边框后，可通过----border-xxxx:none----将指定边框属性消除   */			              
+		</style>
+	</head>
+	<body>
+		<div class="aaa">aaa</div><br />
+		<div class="bbb">bbb</div><br />
+		<div class="ccc">ccc</div>
+	</body>
+</html>

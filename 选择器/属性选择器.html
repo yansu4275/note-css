@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>属性选择器</title>
+		<style type="text/css">
+			p[title]{color:red}
+			p[title="aaaa"]{font-size:30px}
+			/*元素选择器：可以根据元素中的属性名或者属性值选取指定元素
+			 语法：[属性名]{********}
+			      [属性名="属性值"]{***********}
+			      [属性名^]="属性值"-----选取以***开头的元素 
+			      [属性名$]="属性值"-----选取以***结尾的元素  
+			      [属性名*]="属性值"-----选取包含***的元素 */
+			p[title^="aa"]{background-color:yellow}
+		</style>
+	</head>
+	<body>
+		<p title="这里是title">11111111</p>
+		<!--title，可以给任何标签指定
+			当鼠标移动到标签位置时，标签中的title会作为提示显示文字
+		-->
+		<p>000000000000</p>
+		<p>000000000000</p>
+		<p>000000000000</p>
+		<p title="aaaa">000000000000</p>
+		<p title="aabbcc">000000000000</p>
+		<p title="aaaccc">000000000000</p>
+		
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>selected下拉列表</title>
+		<!--
+			value="向服务器提交的值"
+			selected="selected"   表示该选项被默认选中，可简写为selected
+			在头标签<select>中加入multiple="multiple"，设置为多选，可简写为multiple
+				ctrl+右击选择
+		-->
+	</head>
+	<body>
+<!--下拉列表的name指定给select，value指定给option-->		
+		<form action="aaaaaaa.html">
+			地名
+			<select name="ware">
+				<option value="北京" selected="selected">北京</option>
+				<option value="上海">上海</option>
+				<option value="南京">南京</option>
+				<option value="徐州">徐州</option>
+			</select><br /><br /><br />
+			
+			
+<!--在select选项中，可以使用optgroup对选项进行分组
+	label设置组名
+-->				
+			地名
+			<select multiple name="ware2">
+				<optgroup label="北方">
+				<option value="北京" selected="selected">北京</option>
+				<option value="徐州" selected>徐州</option>					
+				</optgroup>
+				
+				<optgroup label="南方">
+				<option value="上海">上海</option>
+				<option value="南京">南京</option>
+				</optgroup>
+				
+			</select>
+			<br />
+			
+			<input type="submit" value="提交" />
+		</form>
+	</body>
+</html>

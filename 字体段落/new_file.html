@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+				<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding:0;
+				margin: 0;
+			}
+			body{
+				padding: 20px;
+			}
+			.clearfix:before,.clearfix:after{
+				content:"";
+				display:table;
+				clear:both;
+				zoom: 1;}
+			.data1{
+				background: red;
+			    display: inline-block;
+			    width: 4em;
+			    /*line-height: 1.7;*/
+			    height: 1.7em;
+			    text-align: justify;
+			    overflow: hidden;
+			}
+			.data1:after{
+			    display: inline-block;
+			    content: '';
+			    width: 48px;
+			    height: 1;
+			    text-align: justify;
+			    overflow: hidden;
+			}
+			.data{
+			}
+			.data1,.maohao,.area2{
+				float: left;
+				display: inline-block;
+			}
+			.area2{
+				width: calc(100% - 5em);
+			}
+		</style>
+	</head>
+	<body>
+		 
+		<div class="data clearfix">
+			<span class="data1">服务热线</span>
+			<span class="maohao">：</span>
+			<a href="tel:021-64260053">021-64260053</a>
+		</div>
+	
+		<div class="data clearfix">
+			<span style="letter-spacing:1.5px" class="data1">E-mail</span>
+			<span class="maohao">：</span>
+			mia@musemusic24.com
+		</div>
+	
+		<div class="data clearfix">
+			<span class="data1">网址</span>
+			<span class="maohao">：</span>
+			n1.musemusic24.com
+		</div>
+	
+		<div class="data clearfix">
+			<span  class="data1">公司地址</span>
+			<span class="maohao">：</span>
+			<div class="area2">
+				上海市徐汇区天钥桥路380弄20号汇峰大厦18F
+			</div>
+		</div> 
+	</body>
+</html>

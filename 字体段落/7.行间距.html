@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.aaa{line-height:3em}
+/*段落行距设为字体大小的3倍，也可以不写em*/
+/*行间距=行高-字体大小*/
+			
+			.bbb{font:20px/40px 微软雅黑}
+/*可以再font中指定行高
+格式：字体大小/行高*/
+			
+			.ccc{width:400px;
+			height:200px;
+			background-color:#bfa;
+			line-height:200px}
+/*对于单行文本，可以将行高设置为和父元素的高度一致，达到在父元素中垂直居中*/
+		</style>
+	</head>
+	<body>
+		<p class="aaa">aaa说明书上说，这辆电动汽车充满电之后可以跑150公里。我弟弟有次验证了下，发现这车不开暖风和音响，最多</p>
+		
+		<p class="bbb">bbbbbbbbbbbbb<br />
+			bbbbbbbbbbbbbbbbbbbbbbbb<br />
+			bbbbbbbbbbbbbbbbbbbbbbbbbb<br /></p>
+		
+		<div class="ccc"><a href="#">ccc这是一个超链接</a></div>
+
+		<input placeholder="0000" />
+	</body>
+</html>

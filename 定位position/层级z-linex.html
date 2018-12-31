@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.aaa{width: 200px;height: 200px;
+			background-color:red;
+			position:relative;/*相对定位*/}
+
+/*如果定位元素的层级一样，则下面的会盖住上面的*/	
+
+/*通过z-index属性可以用来设置层级
+ 可以为z-index设置一个正整数的值作为当前元素层级
+ 值越大层级越大
+ 没有开启定位的z-index不起作用*/		
+			.bbb{width: 200px;height: 200px;
+			background-color:yellow;
+			position:absolute;/*开启绝对定位*/
+			left:100px;top:100px;
+			z-index:10}
+			
+			.ccc{width: 200px;height: 200px;
+			background-color:green;
+			position:relative;/*相对定位*/
+			z-index:1}
+
+/*父元素的层级再高也不会盖住子元素*/			
+			.ddd{width: 200px;height: 200px;
+			background-color:blue;
+			position:relative;/*相对定位*/
+			z-index:20;}
+			
+			.eee{width: 100px;height: 100px;
+			background-color:orange;
+			position:absolute;/*相对定位*/
+			z-index:10}
+		</style>
+	</head>
+	<body>
+		<div class="aaa"></div>
+		<div class="bbb"></div>
+		<div class="ccc"></div>
+		<div class="ddd">
+			<div class="eee"></div>
+		</div>
+	</body>
+</html>

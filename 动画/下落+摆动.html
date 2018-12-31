@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery.min-1.8.js"></script>
+		<style type="text/css">
+			@keyframes myfirst1{
+				from{
+					transform: rotate(-30deg);	
+				}
+				to{
+					transform: rotate(30deg);
+				}
+			}
+			
+			@keyframes myfirst2{
+				from{
+					top: -150px;
+				}
+				to{
+					top: 800px
+				}
+			}
+
+			.aaa{
+				width: 500px;
+				height: 800px;
+				outline: 1px #242822 solid;
+			}
+			.bbb{
+				width: 100px;
+				height: 150px;
+				outline: 1px #242822 solid;
+				background: #ccc;
+				position: relative;
+				top: -150px;
+			}
+			.bbb{
+				transform-origin:top center;
+				animation: myfirst1 1s ease infinite alternate, 
+						   myfirst2 5s linear infinite;
+				
+				animation-play-state: paused;
+				
+			}
+			img{
+				width: 100%;
+			}
+			
+			
+			
+			
+		</style>
+	</head>
+	<body>
+		<div class="aaa">
+			<div class="bbb"><img src="img/d566904862677544f82b1c613d98275b_2.png"/></div>
+		</div>
+		
+	</body>
+</html>
+<script type="text/javascript">
+	$(function(){
+		allW=$('.aaa').width()
+		allH=$('.aaa').height()
+		
+		var a = function(){
+			firstP=Math.random() * allW
+			//摆动+下落
+			$('.bbb').css('animation-play-state','running')
+					 .css({'top':'-150px'})
+			
+			//随机起始位置
+			$('.bbb').css({'left':firstP + 'px'})
+		}
+		
+		a();
+		
+		setInterval(function(){
+			a()
+		},5000)
+		
+		
+	})
+</script>

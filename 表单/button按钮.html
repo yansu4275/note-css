@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+/*cursor：设置光标放入时光标样式
+ *        auto：默认光标
+          pointer：一只手
+          move：十字架*/		
+			.aaa{cursor:pointer;}
+			
+			.bbb{cursor:move;}
+		</style>
+	</head>
+	<body>
+		<form action="aaaaaaa.html" >
+			姓名：
+			<input type="text" name="username" placeholder="00"/>
+			<br />
+			
+			密码：
+			<input type="password" name="pass" value="0000"/>
+			<br />
+			
+			<input type="submit" name="submit" value="确定" />
+			<input type="reset" name="reset" value="重置" />
+			<input type="button" name="button" value="按钮" />
+			<br />
+			
+			<button type="submit" class="aaa">提交</button>
+			<button type="reset" class="bbb">重置</button>
+			<button type="button" class="aaa">按钮</button>
+<!--使用button标签也能创建标签，因为成对出现，更方便，推荐-->			
+		</form>
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.aaa{border:10px solid red;
+			     overflow:hidden;
+			     zoom:1}
+
+/*W3C中，页面中的元素都有一个隐含属性：block formatting context,简称：BFC
+ 该属性可以设置打开或者关闭，默认值为关闭
+ 开启元素的BFC以后，元素将会具有如下特性
+    1.父元素的垂直外边距不会和子元素重叠
+    2.开启BFC的元素不会被浮动元素覆盖
+    3.开启BFC的元素可以包含浮动的子元素
+    
+BFC开启方法
+    1.设置元素浮动-----不推荐
+                会导致父元素宽度丢失，会导致下面元素上移
+    2.设置元素绝对定位-------不推荐
+    3.设置元素为inline-block------不推荐
+                会导致宽度丢失
+    4.将元素的overflow设置为一个非visible值************推荐
+                推荐将overflow:hidden/auto*/
+               
+/*IE6及以下不支持BF，在IE6中有另一个隐藏属性hasLeyout
+  和BFC类似，副作用最小的
+    将元素的zoom设为1
+    
+    zoomb:n,表示放大倍数，元素大小Xn
+    zoom:1表示不放大*/               			
+			.bbb{width:100px;height:100px;
+			     background-color:blue;
+			     float:left;}
+			     
+			.ccc{height:200px;width:200px;
+			     background-color:green}     
+		</style>
+	</head>
+	<body>
+		<div class="aaa">
+			<div class="bbb"></div>
+		</div>
+		
+		<div class="ccc"></div>
+
+	</body>
+</html>

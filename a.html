@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>超链接</title>
+		<style type="text/css">
+/*去除下滑线*/		
+			.aaa{text-decoration:none;}
+		</style>
+	</head>
+	<body>
+		<a href="javascript:">给 a 链接添加 javascript: 阻止页面刷新</a><br />
+		
+		<a class="aaa" href="#aaaaaa">去aaaaaa位置</a><br />
+		<!--通过给标签设置id作为唯一属性，在id前加#即可跳转到相应位置
+			id不能为数字，不能重复
+		-->
+		
+		
+		
+		<a href="http://www.baidu.com">百度网页超链接</a><br /><br />
+		<a href="文本标签.html">文本标签标签相对路径超链接</a><br /><br />
+		<!--使用a标签穿件超链接，
+			属性：href，指向链接的目标地址，可以为相对路径或完整地址
+			     target，指定链接的打开的位置：
+			             _self：当前页面中打开
+			             _blank：新建页面中打开
+			             iframename：在内联框架中打开，与iframe标签中name属性一致-->
+		
+		<a href="http://www.baidu.com" target="_self">在当前页面中打开超链接</a><br />
+		<a href="http://www.baidu.com" target="_blank">在新建页面中打开超链接</a><br /><br />
+		
+		<a href="http://www,baidu.com" target="_abcd">在内联框架abcd中打开超链接</a><br />
+		
+		
+		<iframe src="https://www.baidu.com" name="abcd"></iframe><br />
+		<!--有的外部连接放里面会报错-->
+		
+		
+		
+		<p id="aaaaaa">aaaaaa</p><br />
+		<p>1</p><br />
+		<p>2</p><br />
+		<p>3</p><br />
+		<p>4</p><br />
+		<p>5</p><br />
+		<p>6</p><br />
+		<p>7</p><br />
+		<p>8</p><br />
+		<p>9</p><br />
+		
+		
+
+		<a href="#">暂不知网址的用#做占位符</a><br />    <!--不知道地址时用#作为占位符,且默认为回到页面顶部-->
+		<a href="#">回到顶部</a>
+		
+		| <a href="mailto:*****.com">联系我们</a>
+		<!--自动打开默认邮件客户端，并将收件人设置为*****。com-->
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*设置动画起止*/
+			@keyframes myfirst{
+				from{
+					transform: rotate(0deg);	
+				}
+				to{
+					transform: rotate(360deg);
+				}
+				
+			}
+			
+			.aaa{
+				width: 100px;
+				height: 100px;
+				background: #ccc;
+				transform-origin:center;
+				animation: myfirst 2s linear infinite;
+				
+				animation-play-state: paused;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="aaa">aaa</div>
+		<hr />
+		<hr />
+		<hr />
+		<hr />
+		<hr />
+		<button class="bbb">运行停止切换</button>
+	</body>
+</html>
+<script type="text/javascript">
+	window.onload=function(){
+		var aaa = document.getElementsByClassName('aaa')
+		var bbb = document.getElementsByClassName('bbb')
+		
+		var i =1;
+		bbb[0].onclick=function(){
+			if (i%2==1) {
+				aaa[0].style.animationPlayState='running'
+			} else{
+				aaa[0].style.animationPlayState='paused'
+			}
+			i++;
+		}
+	}
+</script>

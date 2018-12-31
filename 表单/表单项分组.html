@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+<!--在表单中可用fieldset对表单进行分组
+	在fieldset中可以用legend标签对表单进行分组
+-->
+
+		<form action="aaaaaaa.html" method="post">
+		    <fieldset >
+		    	<legend>用户信息</legend>
+				
+			姓名：<input type="text" name="username"/>
+			<br />
+			密码：<input type="password"name="pssword" />
+			</fieldset>
+			
+			
+			<br /><br />
+			
+			<fieldset>
+				<legend>用户爱好</legend>
+			性别：
+			男<input type="radio" name="gander" value="boy"/>
+			女<input type="radio" name="gander" value="girl"/>
+			
+			<br />
+			爱好：<br />
+			篮球<input type="checkbox" name="love" value="篮球"/>
+			足球 <input type="checkbox" name="love" value="足球"/>
+			跑步<input type="checkbox" name="love" value="跑步"/>
+			</fieldset>
+			
+			
+			<br /><br />
+			<input type="submit" name="yes" value="确定"/>
+			<input type="reset" name="no" value="重置" />
+		</form>
+	</body>
+</html>

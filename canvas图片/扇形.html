@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id="canvas" width="" height="" onclick="aaa()" style="color: red;"></canvas>
+	</body>
+</html>
+<script type="text/javascript">
+//	var canvas = document.getElementById('canvas');
+//	var ctx = canvas.getContext('2d');
+//	// 开始一条新路径
+//	ctx.beginPath();
+//	// 位移到圆心，方便绘制
+//	ctx.translate(100, 100);
+//	// 移动到圆心
+//	ctx.moveTo(0, 0);
+//	// 绘制圆弧
+//	ctx.arc(0, 0, 50, 0, Math.PI * 1.5);
+//	// 闭合路径
+//	ctx.closePath();
+//	ctx.fill();
+
+CanvasRenderingContext2D.prototype.sector = function(x, y, radius, sAngle, eAngle, counterclockwise) {
+    this.beginPath();
+    this.translate(x, y);
+    this.moveTo(0, 0);
+    this.arc(0, 0, radius, sAngle, eAngle, counterclockwise);
+    this.closePath();
+    return this;
+};
+
+var ctx = document.getElementById('canvas').getContext('2d');
+ctx.sector(100,100,50,0,Math.PI/180*90).fill();
+
+
+function aaa(){
+	console.log(0)
+}
+
+
+</script>

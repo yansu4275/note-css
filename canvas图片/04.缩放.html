@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="mycanvas" width="500px" height="500px"></canvas>		<hr />
+		<script type="text/javascript">
+				var c =document.getElementById('mycanvas')
+				var ctx = c.getContext('2d')
+				
+				ctx.fillStyle='#ccc'
+				
+				// 缩放，水平、竖直，会连着图片坐标点的位置数据一起缩放
+				ctx.scale(0.5,2)
+				
+				ctx.fillRect(100,100,100,100)
+		</script>
+	</body>
+</html>

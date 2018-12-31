@@ -1,0 +1,7 @@
+.aaa{
+	width:500px;height:500px;
+			background-color:#BBFFAA;
+			background-image:url(../1.jpg)}
+			
+/*相对路径写在哪就相对于哪个文件夹
+ 使用    ../    */

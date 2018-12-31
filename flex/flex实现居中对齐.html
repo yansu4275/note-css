@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.aaa{
+				width: 400px;
+				height: 400px;
+				outline: 1px #000 solid;
+				
+				/*************************************************************/
+				display: flex;
+				/************水平居中*/
+				align-items: center;
+				/*align-items: flex-start;		水平靠左----默认值*/
+				/*align-items: flex-end;		水平靠右*/
+				
+				/****************竖直居中*/
+    			justify-content: center;
+    			/*justify-content: flex-start;		竖直靠顶----默认值*/
+    			/*justify-content: flex-end;		竖直靠底*/
+    			
+    			
+    			/*水平正序，默认*/
+    			/*flex-direction: row;*/				
+    			
+    			/*竖直正序*/
+    			flex-direction: column;				
+    			
+    			/*水平倒序*/
+    			/*flex-direction: row-reverse;*/		
+    				
+    			/*竖直倒序*/
+    			/*flex-direction: column-reverse;*/		
+			}
+			
+			.bbb{
+				width: 50px;
+				height: 50px;
+				background: #ccc;
+				
+				
+				display: flex;
+				align-items: center;				/*竖直居中*/
+    			justify-content: center;			/*水平居中*/
+			}
+			.ccc{
+				background: orange;
+			}
+			.ddd{
+				background: yellowgreen;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="aaa">
+			<div class="bbb">b</div>
+			<div class="ccc bbb">c</div>
+			<div class="ddd bbb">d</div>
+		</div>
+	</body>
+</html>

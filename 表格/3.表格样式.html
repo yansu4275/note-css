@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			table{width:400px;
+				border:1px solid black;
+				cursor: pointer;/*光标小手*/
+				
+/*border-spacing：设置表格之间的距离*/				
+				border-spacing:0px;
+				
+/*border-collapse：设置表格的边框合并
+        设置border-collapse则border-spacing自动失效*/				
+				border-collapse:collapse;}
+			
+			th,td{border:1px solid black;}
+
+
+
+/*隔行变色*/
+/*伪类：nth-chlid(odd),基数行*/			
+			tr:nth-child(odd){background: yellow;}
+			
+/*伪类：nth-chlid(even),偶数行*/		
+			table>tbody>tr:nth-child(even){background: greenyellow;}
+/*如果没有写tbody，浏览器会自动添加tbody
+  tr是tbody的子元素，不是table的直接子元素*/		
+  
+  	
+			th:hover,td:hover{background: red;}
+			
+		</style>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<th>A1</th>
+				<th>A2</th>
+				<th>A3</th>
+				<th>A4</th>
+			</tr>
+			<tr>
+				<td>B1</td>
+				<td>B2</td>
+				<td>B3</td>
+				<td>B4</td>			
+			</tr>
+			<tr>
+				<td>C1</td>
+				<td>C2</td>
+				<td>C3</td>
+				<td>C4</td>
+				
+			</tr>
+			<tr>
+				<td>D1</td>
+				<td>D2</td>
+				<td>D3</td>
+				<td>D4</td>
+			
+			</tr>
+			<tr>
+				<td>B1</td>
+				<td>B2</td>
+				<td>B3</td>
+				<td>B4</td>			
+			</tr>
+			<tr>
+				<td>C1</td>
+				<td>C2</td>
+				<td>C3</td>
+				<td>C4</td>
+				
+			</tr>
+			<tr>
+				<td>D1</td>
+				<td>D2</td>
+				<td>D3</td>
+				<td>D4</td>
+			
+			</tr>
+			<tr>
+				<td>B1</td>
+				<td>B2</td>
+				<td>B3</td>
+				<td>B4</td>			
+			</tr>
+			<tr>
+				<td>C1</td>
+				<td>C2</td>
+				<td>C3</td>
+				<td>C4</td>
+				
+			</tr>
+			<tr>
+				<td>D1</td>
+				<td>D2</td>
+				<td>D3</td>
+				<td>D4</td>
+			
+			</tr>
+		</table>
+	</body>
+</html>

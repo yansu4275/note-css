@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.aaa{border:10px solid red;
+			     height:100px;}
+
+/*文档流中，父元素高度默认是被子元素撑开
+  子元素多高，父元素就多高
+  
+  子元素设置浮动时，父元素高度会塌陷,开发中要避免高度塌陷
+  
+  可以对父元素高度写死，避免塌陷
+  但高度写死，父元素将不能自动适应元素高度，不推荐*/			
+			.bbb{width:100px;height:100px;
+			     background-color:blue;
+			     float:left;}
+			     
+			.ccc{height:100px;
+			     background-color:green}     
+		</style>
+	</head>
+	<body>
+		<div class="aaa">
+			<div class="bbb"></div>
+		</div>
+		
+		<div class="ccc"></div>
+
+	</body>
+</html>

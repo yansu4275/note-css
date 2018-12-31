@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.aaa{
+				width:200px;
+				height: 100px;
+				background: #ccc;
+				
+				transform: skewX(30deg); 
+			    -webkit-transform: skewX(30deg);
+			    -moz-transform: skewX(30deg);
+			    -ms-transform: skewX(30deg);
+			    -o-transform: skewX(30deg);
+			    
+			    position: relative;
+			    z-index: 10;
+			}
+			.yuan{
+				width: 100px;
+				height: 100px;
+				background: red;
+				border-radius: 50px;
+				position: relative;
+				top: -50px;
+				left: 175px;
+				z-index: 9;
+			}
+			.bbb{
+				width:200px;
+				height: 100px;
+				background: #ccc;
+				
+				transform: skewY(30deg);
+			    -webkit-transform: skewY(30deg);
+			    -moz-transform: skewY(30deg);
+			    -ms-transform: skewY(30deg);
+			    -o-transform: skewY(30deg);
+			}
+			.ccc{
+				width:200px;
+				height: 100px;
+				background: #ccc;
+				
+				transform: skew(30deg,30deg);
+			    -webkit-transform: skew(30deg,30deg);
+			    -moz-transform: skew(30deg,30deg);
+			    -ms-transform: skew(30deg,30deg);
+			    -o-transform: skew(30deg,30deg);
+			}
+		</style>
+		
+		<script type="text/javascript">
+			function aaa(){
+				console.log(0)
+			}
+		</script>
+		
+	</head>
+	<body>
+		<h3>skewX(angle)----------定义沿着 X 轴的 2D 倾斜转换。</h3>
+		<div class="aaa">
+			aaaaaaaaaa
+		</div>
+		<div class="yuan" onclick="aaa()"></div>
+		<hr />
+		
+		
+		<h3>skewY(angle)----------定义沿着 y 轴的 2D 倾斜转换。</h3>	<br /><br /><br />
+		<div class="bbb">
+			bbbbbbbbbbbb
+		</div>
+		
+		
+		<h3>skew(X,Y)----------定义沿着 y 轴的 2D 倾斜转换。</h3>	<br /><br /><br />
+		<div class="ccc">
+			cccccccccccccc
+		</div>
+		
+	</body>
+</html>

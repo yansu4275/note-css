@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://uedsky.com/demo/modal-scroll.html -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="Brook"><meta name="description" content=" body.modal-open { position: fixed; width: 100%; } .modal { background: rgba(0, 0, 0, 0.5); position: fixed; top: 0; right: 0; b"><link rel="stylesheet" href="./解决滚动穿透问题 Demo_files/demo.css"><title>解决滚动穿透问题 Demo</title></head><body><div id="page"><h2 class="page-header">解决滚动穿透问题 Demo</h2><div class="page-back"><a href="https://uedsky.com/2016-06/mobile-modal-scroll/">Back to Post</a></div><style>
+body.modal-open {
+    position: fixed;
+    width: 100%;
+}
+.modal {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed; top: 0; right: 0; bottom: 0; left: 0;
+
+  display: none;
+}
+.modal-frame {
+  position: absolute;left:10%;right:10%; top: 50%; transform: translateY(-50%);
+  border: solid 1px #ddd; background: #fff;
+  padding: 1em;
+}
+</style>
+<div class="text-center">
+  <a class="js-open-modal" href="javascript:" target="_blank" rel="external">Open Modal</a>
+  <div style="height:400px">
+    <div>请使用手机浏览</div>
+    <img src="./解决滚动穿透问题 Demo_files/qr">
+  </div>
+  <a class="js-open-modal" href="javascript:" target="_blank" rel="external">Open Modal 2 (restore scrolling position)</a>
+  <p>0</p>
+  <p>0</p>
+  <p>0</p>
+  <p>0</p>
+  <p>0</p>
+  <p>0</p>
+  <p>0</p>
+  <p>0</p>
+  <p>0</p>
+  <p>0</p>
+  <p>0</p>
+  <p>0</p>
+  <p>0</p>
+  <div style="height:400px"></div>
+</div>
+<div id="modal" class="modal">
+  <div class="modal-frame">
+    <div style="height:9em;overflow-y:auto;">
+    	这里是可滚动内容<br>
+    	Modal Content<br>
+    	Modal Content<br>
+    	Modal Content<br>
+    	Modal Content<br>
+    	Modal Content<br>
+    	Modal Content<br>
+    	Modal Content<br>
+    	Modal Content<br>
+    	Modal Content<br>
+    	Modal Content<br>
+    	Modal Content<br>
+    </div>
+  </div>
+</div>
+<script async="" src="./解决滚动穿透问题 Demo_files/analytics.js"></script><script>
+(function() {
+  /**
+   * ModalHelper helpers resolve the modal scrolling issue on mobile devices
+   * https://github.com/twbs/bootstrap/issues/15852
+   * requires document.scrollingElement polyfill https://github.com/yangg/scrolling-element
+   */
+  var ModalHelper = (function(bodyCls) {
+    var scrollTop;
+    return {
+      afterOpen: function() {
+        scrollTop = document.scrollingElement.scrollTop;
+        document.body.classList.add(bodyCls);
+        document.body.style.top = -scrollTop + 'px';
+      },
+      beforeClose: function() {
+        document.body.classList.remove(bodyCls);
+        // scrollTop lost after set position:fixed, restore it back.
+        document.scrollingElement.scrollTop = scrollTop;
+      }
+    };
+  })('modal-open');
+
+  function openModal() {
+    document.getElementById('modal').style.display = 'block';
+    ModalHelper.afterOpen();
+  }
+  function closeModal() {
+    ModalHelper.beforeClose();
+    document.getElementById('modal').style.display = 'none';
+  }
+  var btns = document.querySelectorAll('.js-open-modal');
+  btns[0].onclick = openModal;
+  btns[1].onclick = openModal;
+  document.querySelector('#modal').onclick = closeModal;
+})();
+</script>
+<script>
+(function() {
+  function addScript(src, supported) {
+   if(!supported)
+     document.write('<script src="' + src + '" async ></' + 'script>');
+  }
+  addScript('../src/polyfills/document.scrollingElement.js', document.scrollingElement);
+})();
+</script>
+  
+</div><footer id="footer">©2017&nbsp;Brook</footer><!-- google analytics--><script type="text/javascript">(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-78709503-1', 'auto');
+ga('send', 'pageview');</script></body></html>

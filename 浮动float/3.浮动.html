@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+/*文档流中，子元素为块元素时宽度默认占父元素全部*/		
+			.aaa{height:100px;
+			     background-color:#bfa}
+
+/*块元素脱离文档流后，宽高会被内容撑开（可自行设置）*/			     
+			.bbb{height:100px;
+				background-color:red;
+			     float:left} 
+			     
+/*内联元素脱离文档流后会变成块元素*/			
+			.ccc{width:100px;height:100px;
+			     background-color:yellow;
+			     float:left;}         
+		</style>
+	</head>
+	<body>
+		<div class="aaa"></div>
+		<div class="bbb">bbb块元素</div>
+		<span class="ccc">span</span>
+	</body>
+</html>

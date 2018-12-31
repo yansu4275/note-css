@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.a,.b{
+				display: -webkit-box;
+				-webkit-box-orient:vertical;
+				height: 400px;
+				width: 400px;
+				outline: 1px #0000CC solid;
+			}
+			.aaa{
+				display: -webkit-box;
+				-webkit-box-orient:vertical;
+				width: 100%;
+				height: 10%;
+				background: red;
+			}
+			
+			.bbb{
+				width: 100%;
+				height: 10%;
+				background: orange;
+			}
+			
+			.ccc{
+				display: block;
+				-webkit-box-flex: 1;
+				background: yellow;
+			}
+			
+			.b{
+				webkit-box-orient:vertical
+			}
+			.b1{
+			display: block;
+			-webkit-box-flex: 1;
+			background: red;
+			}
+			.b2{
+			display: block;
+			width: 100px;
+			background: green;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="a">
+			<div class="aaa"></div>
+			<div class="ccc">默认铺满剩余部分</div>
+			<div class="bbb"></div>
+		</div>
+		
+		<div class="b">
+			<div class="b1">1</div>
+			3
+			<div class="b2">2</div>
+		</div>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,27 @@
+复制代码
+<!DOCTYPE html>
+<html> 
+<head>
+    <meta charset="UTF-8">
+    <title></title> 
+    <style>
+     .chk_div label{
+     	background: url(../背景/2.png) no-repeat; 
+     	width: 232px;
+     	 height: 32px; 
+     	 display: block; 
+     	 padding-left: 35px;
+     	 padding-top: 5px;
+     }
+     .chk_div input[type=checkbox]:checked+label{
+     	background: url(img/check_icogreen.png) no-repeat;
+     }
+    </style>   
+</head> 
+<body>
+ <div class="chk_div">
+      <input type="checkbox" value="dd" checked="checked" id="checkforbox" style="display: none;">
+      <label for="checkforbox">同意服务条款</label>
+ </div>
+ </body> 
+</html>

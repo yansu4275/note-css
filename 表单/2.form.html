@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>form表单标签，与用户交互</title>
+		<!--<form method="传送方式" action="服务器文件">****</form>
+			
+			method：数据传送方式（get/post<br）
+			action：浏览者输入的数据被传送到的地方，比如save.php
+			value：向服务器提交的值
+			
+			所有表单控件（文本框，文本域，按钮，单选框，复选框等）都必须放在<form>***</form>标签之间
+		-->
+		
+	</head>
+	<body>
+		<form method="past" action="save.php">
+			<label for="username">你叫啥：</label>
+			<input type="text" name="usernanme" id="username" /><br />
+			
+			<label for="pass">密码：</label>
+			<input type="password" name="pass" id="pass"/><br />
+
+<!--type="submit,确定按钮，提交"-->
+<!--type="reset",重置按钮，恢复默认值-->
+<!--type="button"，设置一个单纯按钮，一般结合js使用-->
+			<input type="submit" value="确定" />
+			<input type="reset" value="重置按钮" name="reset" />
+			<br />
+
+			<input type="button" value="按钮" />
+		</form>
+	</body>
+</html>

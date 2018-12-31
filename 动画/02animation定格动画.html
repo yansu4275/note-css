@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+/*			@-webkit-keyframes -----safari和谷歌*/
+/*			@-o-keyframes-----opera*/
+			
+			@keyframes myfirst{
+				from{
+					width: 200px;
+				}
+				to{
+					width: 400px;
+				}
+				
+			}
+			
+			.aaa{
+				width: 200px;
+				height: 200px;
+				border: solid 2px red;
+				
+				/*animation: 动画函数、运行时间、运行方式、延迟时间、运行次数、是否返回;*/
+				animation: myfirst 1s ease 1s;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<h1>animationend定格动画</h1>
+		<div class="aaa"></div>
+	</body>
+</html>
+<script type="text/javascript">
+	window.onload=function(){
+		var aaa = document.getElementsByClassName('aaa')
+		aaa[0].addEventListener('animationend',function(){
+			this.style.width='400px'
+		},false)
+	} 
+</script>
