@@ -1,53 +1,57 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-		<style type="text/css">
-			div{
-				max-width: 1200px;
-				box-sizing: border-box;
-				outline: 1px red solid;
-			}
-			ul{
-				list-style: none;
-				display: flex;
-				flex-wrap: wrap;/*不超出容器*/
-				padding: 0;
-			}
-			li{
-				flex-grow: 1; 		/*充满整行*/
-				flex-basis: 250px; 	/*最小宽度*/
-				height: 200px;
-				outline: 1px #ccc solid;
-				margin: 10px;
-				display: flex;
-				
-				/*内容水平居中*/
-				align-items: center;
-				
-				/*内容竖直居中*/
-		    	justify-content: center;
-		    	
-		    	/*内容竖直正序*/
-    			flex-direction: column;				
-		    	
-			}
-		</style>
-		
-	</head>
-	<body>
-		<div>
-			<ul>
-				<li><span>000000</span><span>111111</span></li>
-				<li><span>000000</span><span>111111</span></li>
-				<li><span>000000</span><span>111111</span></li>
-				<li><span>000000</span><span>111111</span></li>
-				<li><span>000000</span><span>111111</span></li>
-				<li><span>000000</span><span>111111</span></li>
-				<li><span>000000</span><span>111111</span></li>
-			
-			</ul>
-		</div>
-	</body>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        div {
+            max-width: 1200px;
+            box-sizing: border-box;
+            outline: 1px red solid;
+        }
+        
+        ul {
+            list-style: none;
+            display: flex;
+            /*不超出容器*/
+            flex-wrap: wrap;
+            padding: 0;
+        }
+        
+        li {
+            /*充满整行*/
+            flex-grow: 1;
+            /*最小宽度*/
+            flex-basis: 250px;
+            height: 200px;
+            outline: 1px #ccc solid;
+            margin: 10px;
+            display: flex;
+            /*内容水平居中*/
+            align-items: center;
+            /*内容竖直居中*/
+            justify-content: center;
+            /*内容竖直正序*/
+            flex-direction: column;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li><span>000000</span><span>111111</span></li>
+            <li><span>000000</span><span>111111</span></li>
+            <li><span>000000</span><span>111111</span></li>
+            <li><span>000000</span><span>111111</span></li>
+            <li><span>000000</span><span>111111</span></li>
+            <li><span>000000</span><span>111111</span></li>
+            <li><span>000000</span><span>111111</span></li>
+
+        </ul>
+    </div>
+</body>
+
 </html>
