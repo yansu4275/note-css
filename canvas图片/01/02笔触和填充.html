@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #aaa{
+            border: 1px #000 solid;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="500px" height="500px" id="aaa"></canvas>
+</body>
+</html>
+<script>
+    var aaa = document.getElementById('aaa')
+    var ctx = aaa.getContext("2d")
+
+    // ctx.strokeRect(x, y, w, h) ------------------- 笔触/描边
+    ctx.strokeStyle='red'
+    ctx.strokeRect(10,10,50,50)
+    
+    ctx.beginPath()                     // 开始一条新路径
+1
+    // 划线
+    ctx.beginPath();        // 开始画线
+    ctx.moveTo(0, 100);     // 将点移动到某一点
+    ctx.lineTo(100, 300);   // 开始划线，但是时虚拟的
+    ctx.lineTo(300, 300);
+    ctx.lineWidth=10;       // 线条宽度
+    
+
+    ctx.closePath()         // 封闭
+    
+    ctx.fillStyle='red';
+    ctx.fill()              // 填充
+    
+    ctx.strokeStyle="blue";
+    ctx.stroke()            // 划线
+
+    
+
+</script>

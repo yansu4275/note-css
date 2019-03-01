@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #aaa{
+            border: 1px #000 solid;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="500px" height="500px" id="aaa"></canvas>
+</body>
+</html>
+<script>
+    var aaa = document.getElementById('aaa')
+    var context = aaa.getContext("2d")
+
+    // canvas使用了一个特殊的模式，上屏的元素，立刻被像素画，也就是说得不到这个对象
+    // 例如一个圆形画到ctx上，就是一堆像素，没有任何变量能得到这个圆形
+    // 要想产生运动必须重新画一个
+    // 通过 clearRect 清除，再重绘
+
+    let a=0
+    setInterval(() => {
+        a++
+
+        // context.clearRect(x, y, width, height) 清除屏幕，起点，宽高
+        context.clearRect(0, 0, 500, 500);
+
+        context.beginPath()                     // 开始一条新路径
+        context.arc(a, 100, 50, Math.PI / 180 * 0, Math.PI / 180 * 360, true);
+        context.closePath();
+        context.fillStyle='orange';
+        context.fill();
+        
+    }, 100);
+    
+    
+    
+</script>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #aaa{
+            border: 1px #000 solid;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="500px" height="500px" id="aaa"></canvas>
+</body>
+</html>
+<script>
+    var aaa = document.getElementById('aaa')
+    var ctx = aaa.getContext("2d")
+    ctx.beginPath()                     // 开始一条新路径
+
+    // ctx.arc(x, y, 半径, 起始角度，结束角度，是否逆时针)
+    ctx.arc(200, 200, 100, Math.PI/180*90, Math.PI/180*180, true)
+    ctx.stroke();
+    
+</script>

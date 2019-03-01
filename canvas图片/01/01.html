@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #aaa{
+            border: 1px red solid;
+        }
+    </style>
+</head>
+<body>
+    <canvas   id="aaa"></canvas>
+</body>
+</html>
+<script>
+    // 获取画布
+    // var aaa = document.querySelectorAll("canvas")
+    var aaa = document.getElementById("aaa")
+    
+    var ctx = aaa.getContext("2d")      // 使用画布上下文
+
+    ctx.fillStyle = 'orange'            // 颜色
+
+    ctx.fillRect(20, 30, 100, 50)       // 方块，（x坐标，y坐标，宽，高）
+
+
+
+    ctx.beginPath()                     // 开始一条新路径
+    ctx.fillStyle = 'red'
+    ctx.arc(300,300,100,0,Math.PI*2,true)   // 
+    ctx.fill()
+    ctx.closePath()
+
+
+</script>

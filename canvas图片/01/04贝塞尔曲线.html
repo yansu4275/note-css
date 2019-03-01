@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #aaa{
+            border: 1px #000 solid;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="500px" height="500px" id="aaa"></canvas>
+</body>
+</html>
+<script>
+    var aaa = document.getElementById('aaa')
+    var context = aaa.getContext("2d")
+    context.beginPath()                     // 开始一条新路径
+
+    context.moveTo(100, 100);
+    // context.quadraticCurveTo(控制点x, 控制点y,终点x,终点y)
+    // context.quadraticCurveTo(200, 150, 300, 300);
+
+    // context.bezierCurveTo(控制点x1, 控制点y2,......终点x,终点y);
+    context.bezierCurveTo(200, 50, 250, 350, 300, 300);
+    
+    context.stroke();
+    
+    
+    
+    
+    
+</script>

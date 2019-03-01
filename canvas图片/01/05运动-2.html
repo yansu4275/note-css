@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #aaa{
+            border: 1px #000 solid;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="500px" height="500px" id="aaa"></canvas>
+</body>
+</html>
+<script>
+    var aaa = document.getElementById('aaa')
+    var context = aaa.getContext("2d")
+
+    // context.beginPath()
+
+    // 构造函数，创建图形，可以方便创建多个图形
+    function ball(x, y, r, start, end, anticlockwise, v){
+        this.x = x;         // 坐标x
+        this.y = y;         // 坐标y
+        this.r = r;         // 半径
+        this.start = start  // 起始角度
+        this.end = end      // 终止角度
+        this.anticlockwise  // 是否逆时针
+
+        this.v = v;         // 速度
+    }
+    // 挂载创建图形的函数
+    ball.prototype.render = function () {
+        context.beginPath();
+        context.arc(this.x, this.y, this.r, Math.PI / 180 * this.start, Math.PI / 180 * this.end, this.anticlockwise);
+        context.fill();
+    }
+    // 挂载图片移动的函数
+    ball.prototype.update = function () {
+        this.x += this.v    
+    }
+
+    // let a = new ball(100, 100, 50, 0, 360, true, 2)
+    // let text = 0;          
+
+    // // 定时器，先update移动，然后清除画布，再render创建新的（先后顺序改变好像也没啥区别）
+    // setInterval(() => {
+    //     context.clearRect(0, 0, 500, 500);
+
+    //     // fillText(内容，x，y) 帧编号，在画布上打印文字
+    //     context.fillText(text++, 10, 10);  
+        
+    //     a.update()  
+    //     a.render()
+    // }, 100);
+
+
+
+
+
+    let arr = [
+        new ball(100, 100, 50, 0, 360, true, 2),
+        new ball(100, 200, 50, 0, 360, true, 2),
+    ]
+    let text = 0;          
+
+    // 定时器，先update移动，然后清除画布，再render创建新的（先后顺序改变好像也没啥区别）
+    setInterval(() => {
+        context.clearRect(0, 0, 500, 500);
+
+        context.fillText(text++, 0, 10);  
+
+        for(let i = 0; i<arr.length; i++){
+            arr[i].update()
+            arr[i].render()
+        }
+    }, 100);
+
+
+
+
+    // let b = new ball(200, 100, 50, 0, 360, true, 10)
+    // context.fillStyle='orange';
+    // b.render()
+    
+    
+</script>
