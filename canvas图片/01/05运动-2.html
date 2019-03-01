@@ -60,7 +60,7 @@
 
 
 
-
+    // 将新到的图形放到数组里
     let arr = [
         new ball(100, 100, 50, 0, 360, true, 2),
         new ball(100, 200, 50, 0, 360, true, 2),
@@ -73,10 +73,17 @@
 
         context.fillText(text++, 0, 10);  
 
-        for(let i = 0; i<arr.length; i++){
+        // 循环更新图形数组数组
+        // for(let i = 0; i<arr.length; i++){
+        //     arr[i].update()
+        //     arr[i].render()
+        // }
+        arr.forEach((val,i,arr)=>{
             arr[i].update()
             arr[i].render()
-        }
+        })
+
+
     }, 100);
 
 
