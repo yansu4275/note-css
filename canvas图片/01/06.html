@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0
+        }
+        body{
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body >
+    <c anvas id="aaa"></c>
+</body>
+</html>
+<script>
+    var aaa = document.querySelector('#aaa')
+    var context = aaa.getContext('2d')
+
+    aaa.width = document.documentElement.clientWidth
+    aaa.height = document.documentElement.clientHeight
+
+    // function Ball(x,y){
+    //     this.x = x
+    //     this.y = y
+    //     this.r = 30
+    //     this.color = 'red'
+    //     this.vx = 1
+    //     this.vy = 1
+    // }
+    // Ball.prototype.render = function () {
+    //     context.beginPath();
+    //    context.arc(this.x, this.y, this.r, Math.PI / 180 * 0, Math.PI / 180 * 360, true);
+    //    context.closePath();
+    //     context.fillStyle='orange';
+    //     context.fill();
+    // }
+
+    class Ball{
+        constructor(x, y){
+            this.x = x
+            this.y =y
+            this.r = 20
+            this.color = 'red'
+            this.vx = parseInt(Math.random() * 8) - 4
+            this.vy = parseInt(Math.random() * 8) - 4
+            // 将自己放入数组中
+            arr.push(this)
+        }
+        // 创建图片
+        render(){
+            context.beginPath();
+            context.arc(this.x, this.y, this.r, Math.PI / 180 * 0, Math.PI / 180 * 360, 1);
+            context.closePath();
+            context.fillStyle= this.color;
+            context.fill();
+        }
+        // 定时器中图片移动、半径减小，当半径为 0，从数组中删除自己
+        update(){
+            this.x += this.vx
+            this.y += this.vy
+            this.r --
+            if (this.r == 0) {
+                this.godie()
+            }
+        }
+        // 删除自己
+        godie(){
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] === this) {
+                    arr.splice(i, 1)
+                }
+            }
+        }
+    }
+
+    let arr = []
+    // 定时器
+    let bbb = setInterval(() => {
+        // 清除画布
+        context.clearRect(0, 0, aaa.width, aaa.width);
+        for (let i = 0; i < arr.length; i++) {
+            // 图片运动
+            arr[i].update()
+
+            // 因为图片半径为零时会删除，所以要先验证这个图片是否存在，存在的话才能render*******
+            arr[i] && arr[i].render()
+        }
+    }, 20);
+
+    // 鼠标移动时，根据坐标创建图片
+    aaa.onmousemove = function (e) {
+        new Ball(e.clientX, e.clientY)
+    }
+</script>
