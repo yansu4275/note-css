@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/jquery-3.2.0.js"></script>
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0
+        }
+        body{
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+        #aaa{
+            background: #ccc;
+        }
+
+    </style>
+</head>
+<body >
+    <canvas id="aaa"></canvas>
+</body>
+</html>
+<script>
+    $(function(){
+        
+    })
+    var aaa = document.querySelector('#aaa')
+    var context = aaa.getContext('2d')
+    aaa.width = document.documentElement.clientWidth
+    aaa.height = document.documentElement.clientHeight
+
+    // 游戏中有多张图片，这些图片必须全都先 load 了，才能执行定时器
+    // 我们可以使用外置 json 结合 ajax 来配置资源管理
+    // 使用 ajax 加载资源文件 json
+
+    // 资源对象
+    var R = {}
+    // 已经加载完毕的图片数量
+    var a = 0
+    var xhr = new XMLHttpRequest()
+    xhr.open("get", "08R.json", true)
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 ) {
+            console.log(xhr.responseText)
+            var imgs = JSON.parse(xhr.responseText).imgs
+            // console.log(data.imgs)
+            for (let i = 0; i < imgs.length; i++) {
+                // 创建 R 对象中的键，键的名字就是数组中项目的 name 属性
+                R[imgs[i].name] = new Image()
+                R[imgs[i].name].src = imgs[i].url  
+                // 当图片加载好后判断加载的图片数量和图片总数
+                R[imgs[i].name].onload = function () {
+                    a++
+                    console.log(`第${a}张图片加载完毕----${R[imgs[i].name]}`)
+                    if (a == imgs.length) {
+                        console.log('全部加载完毕')
+                        start()
+                    }
+                }          
+            }
+            console.log(R)
+        }
+    }
+    xhr.send(null)
+
+    function start(){
+        var fno = 0
+        setInterval(()=>{
+            fno++              
+            context.clearRect(0, 0, aaa.width, aaa.height);
+
+            // 使用图片
+            context.drawImage(R.huoying, 0, 0, 50, 50, 0, 0, 50*2, 50*2);
+            context.drawImage(R.quanhuang, 0, 0, 50, 50, 0, 100, 50*2, 50*2);
+        },40)
+    }
+    // var aaa = new Image()
+    // // aaa.src = 'img/拳皇.png'
+    // aaa.src = 'img/火影.png'
+    // aaa.onload = function(){
+    //     var imgW = aaa.width
+    //     var imgH = aaa.height
+    //     var w = imgW/4
+    //     var h = imgH/4
+    //     var x = 0
+    //     var n = 0
+    //     var interval = setInterval(()=>{
+    //         context.clearRect(0, 200, 10000, h);
+    //         n++
+    //         if (n >3) {
+    //             n = 0
+    //         }
+    //         x+=5
+    //         context.drawImage(aaa, w*n, h*2, w, h, x, 200, w, h);
+    //         // 走到头自动停止，并通过 n 确定当前图片动作
+    //         if(x>=document.documentElement.clientWidth - w){
+    //             clearInterval(interval)
+    //             context.clearRect(0, 200, 10000, h);
+    //             n = 1
+    //             context.drawImage(aaa, w*n, h*2, w, h, x, 200, w, h);
+    //         }
+    //     },100)
+    // }
+</script>
