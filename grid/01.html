@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            width: 500px;
+            height: 700px;
+            background: #ccc;
+            display: grid;
+
+            /* 设置一行有几个，以及每个的宽度 */
+            /* grid-template-columns: 100px 100px 100px 100px; */
+            grid-template-columns: 20% auto 20%;
+            /* 设置每行的高度 */
+            grid-template-rows: 100px 100px 100px;
+        }
+        .item{
+            outline: 1px red solid;
+        }
+        .item1{
+            grid-column-start: 1;
+            grid-column-end: 4
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item tiem1">1</div>
+        <div class="item tiem2">2</div>
+        <div class="item tiem3">3</div>
+        <div class="item tiem4">4</div>
+        <div class="item tiem5">5</div>
+        <div class="item tiem6">6</div>
+        <div class="item tiem6">6</div>
+        <div class="item tiem6">6</div>
+        <div class="item tiem6">6</div>
+        <div class="item tiem6">6</div>
+    </div>
+</body>
+</html>

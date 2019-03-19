@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            width: 500px;
+            height: 700px;
+            background: #ccc;
+            display: grid;
+
+            /* 设置一行有几个，以及每个的宽度 */
+            grid-template-columns: 100px 100px 100px 100px;
+            /* grid-template-columns: 20% auto 20%; */
+            /* 设置每行的高度 */
+            grid-template-rows: 100px 100px 100px;
+        }
+        .item{
+            outline: 1px red solid;
+        }
+
+        /*  
+            设置子元素大小
+            父元素设置了每一格的宽高
+            子元素根据网格线设置大小
+         */
+        .item1 {
+            /* grid-column-start: 1;
+            grid-column-end: 3; */
+            grid-column: 1/4
+        }
+        .item3 {
+            /* grid-row-start: 2;
+            grid-row-end: 4; */
+            grid-row: 2/4
+        }
+        .item4 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+        <div class="item item6">6</div>
+        <div class="item item6">6</div>
+    </div>
+</body>
+</html>
